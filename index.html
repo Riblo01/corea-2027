@@ -1,0 +1,1061 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Itinerario de 10 días en Corea del Sur para 6 desde Quito: Seúl, Gyeongju y Busan, skin care, chequeo médico, mapas, Airbnb, costos y plan de ahorro.">
+<meta property="og:title" content="Corea 2027 · Ruta de los seis">
+<meta property="og:description" content="Itinerario de 10 días en Corea del Sur para 6 desde Quito: Seúl, Gyeongju y Busan, skin care, chequeo médico, mapas, Airbnb, costos y plan de ahorro.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://riblo01.github.io/corea-2027/">
+<meta property="og:image" content="https://riblo01.github.io/corea-2027/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2459A8">
+<title>Corea 2027 · Ruta de los seis</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Noto+Sans+KR:wght@400;500;700&amp;display=swap">
+<style>
+/* Layout: a rail timetable. Ticket header, month and lodging switches, line map, route maps, lodging cards, then one timetable card per day with photos and its station stamp. */
+:root{
+  --paper:#F5F7F5; --card:#FFFFFF; --ink:#17201C; --muted:#5B6863; --rule:#D8DFDB; --soft:#EBF0ED;
+  --seoul:#2459A8; --gyeongju:#9A6B1F; --beauty:#C2417A; --busan:#0B7F86; --air:#3F6688;
+  --ok:#2B7A57; --ok-bg:#E3F2EA; --est:#8F6210; --est-bg:#F7EDD9; --pin-ink:#FFFFFF;
+  --display:"Black Han Sans","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --body:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111614; --card:#18201D; --ink:#E4EBE7; --muted:#97A59F; --rule:#2A3430; --soft:#1F2925;
+  --seoul:#86AEF2; --gyeongju:#D8A350; --beauty:#F28CBA; --busan:#4CC5CC; --air:#7FA6C9;
+  --ok:#6FCF9F; --ok-bg:#183328; --est:#E5B45C; --est-bg:#352812; --pin-ink:#0E1311; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111614; --card:#18201D; --ink:#E4EBE7; --muted:#97A59F; --rule:#2A3430; --soft:#1F2925;
+  --seoul:#86AEF2; --gyeongju:#D8A350; --beauty:#F28CBA; --busan:#4CC5CC; --air:#7FA6C9;
+  --ok:#6FCF9F; --ok-bg:#183328; --est:#E5B45C; --est-bg:#352812; --pin-ink:#0E1311; color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 64px}
+.wrap{max-width:1000px;margin:0 auto;display:grid;gap:44px}
+h1,h2,h3{text-wrap:balance;margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible,label:focus-within{outline:2px solid var(--air);outline-offset:2px}
+img{display:block;max-width:100%}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500}
+section{display:grid;gap:16px;min-width:0}
+.sec-head{display:grid;gap:6px;max-width:70ch}
+.sec-head h2{font-family:var(--display);font-weight:400;font-size:26px}
+.sec-head p{margin:0;color:var(--muted)}
+
+/* Ticket header */
+.ticket{background:var(--card);border:1px solid var(--rule);border-radius:14px;display:grid;grid-template-columns:1fr auto;overflow:hidden}
+.ticket-main{padding:24px 26px;display:grid;gap:14px;min-width:0}
+.route{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.route .city{font-family:var(--display);font-size:clamp(28px,6vw,46px);line-height:1}
+.route .arrow{font-family:var(--mono);color:var(--muted);font-size:20px}
+.route .kanji{font-family:var(--display);font-size:clamp(28px,6vw,46px);color:var(--seoul);line-height:1}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;color:var(--muted)}
+.meta b{color:var(--ink);font-weight:500}
+.ticket-stub{border-left:2px dashed var(--rule);padding:24px 26px;display:grid;align-content:center;gap:4px;min-width:220px;background:var(--soft)}
+.stub-total{font-family:var(--mono);font-size:34px;font-weight:500;line-height:1.1;font-variant-numeric:tabular-nums}
+.stub-sub{font-size:13px;color:var(--muted)}
+@media (max-width:640px){.ticket{grid-template-columns:1fr}.ticket-stub{border-left:0;border-top:2px dashed var(--rule)}}
+
+/* Controls */
+.controls{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+.ctl{display:grid;gap:6px}
+.ctl > span{font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.seg{display:inline-flex;border:1px solid var(--rule);border-radius:999px;overflow:hidden;background:var(--card);flex-wrap:wrap}
+.seg label{cursor:pointer;position:relative}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:block;padding:7px 14px;font-size:14px;color:var(--muted)}
+.seg input:checked+span{background:var(--ink);color:var(--paper)}
+.check{display:inline-flex;gap:8px;align-items:center;font-size:14px;cursor:pointer;align-self:end;padding-bottom:6px}
+.check input{width:18px;height:18px;accent-color:var(--busan)}
+.legend{display:flex;gap:10px 14px;flex-wrap:wrap;font-size:13px;color:var(--muted);align-items:center}
+.chip{display:inline-block;font-size:11px;letter-spacing:.04em;padding:1px 7px;border-radius:999px;font-weight:500;white-space:nowrap;vertical-align:1px}
+.chip.v{background:var(--ok-bg);color:var(--ok)}
+.chip.e{background:var(--est-bg);color:var(--est)}
+.chip.o{border:1px dashed var(--muted);color:var(--muted)}
+.month-note{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--busan);border-radius:0 10px 10px 0;padding:12px 16px;font-size:14px}
+.month-note b{font-weight:700}
+
+/* Line map */
+.linemap{overflow-x:auto}
+.line{list-style:none;margin:0;padding:8px 0 0;display:grid;grid-template-columns:repeat(5,minmax(96px,1fr));min-width:520px}
+.line li{position:relative;display:grid;justify-items:center;text-align:center;gap:4px;padding-top:26px}
+.line li::before{content:"";position:absolute;top:10px;left:0;right:0;height:6px;background:var(--c)}
+.line li:first-child::before{left:50%}
+.line li:last-child::before{right:50%}
+.line li::after{content:"";position:absolute;top:3px;left:50%;transform:translateX(-50%);width:20px;height:20px;border-radius:50%;background:var(--card);border:4px solid var(--c)}
+.line .st{font-family:var(--display);font-size:20px;line-height:1.1}
+.line .lat{font-weight:500;font-size:14px}
+.line .n{font-size:12px;color:var(--muted)}
+
+/* Maps */
+.maps{display:grid;gap:22px}
+.map{margin:0;background:var(--card);border:1px solid var(--rule);border-radius:14px;overflow:hidden;display:grid;grid-template-columns:minmax(0,3fr) minmax(220px,2fr)}
+.map.wide{grid-template-columns:1fr}
+.map-frame{position:relative;min-width:0;align-self:start}
+.map-frame img{width:100%;height:auto}
+.pin{position:absolute;transform:translate(-50%,-50%);min-width:24px;height:24px;padding:0 5px;border-radius:12px;border:2px solid var(--card);background:var(--c);color:var(--pin-ink);font:500 12px/20px var(--mono);cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.35)}
+.pin.bnb{border-radius:5px;background:var(--ink);color:var(--paper)}
+.pin.bnb.dim{opacity:.45}
+.pin.city{min-width:16px;height:16px;padding:0;border-radius:50%;background:var(--card);border:4px solid var(--c)}
+.pin:hover,.pin:focus-visible{z-index:5}
+.pin[data-label]:hover::after,.pin[data-label]:focus::after{content:attr(data-label);position:absolute;left:50%;bottom:calc(100% + 6px);transform:translateX(-50%);white-space:nowrap;background:var(--ink);color:var(--paper);font:400 12px/1.4 var(--body);padding:4px 8px;border-radius:6px;pointer-events:none}
+.citylabel{position:absolute;transform:translate(-50%,10px);font:400 15px/1.1 var(--display);color:#17201C;text-shadow:0 0 3px #fff,0 0 3px #fff;pointer-events:none;white-space:nowrap}
+.map-legend{padding:16px 18px;display:grid;gap:8px;align-content:start;font-size:13px;border-left:1px solid var(--rule);min-width:0}
+.map-legend ol{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.map-legend h3{font-size:15px;font-weight:700}
+.map-legend li{display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:start}
+.map-legend .k{font:500 12px/20px var(--mono);text-align:center;border-radius:10px;color:var(--pin-ink);background:var(--c);height:20px}
+.map-legend .k.bnb{border-radius:4px;background:var(--ink);color:var(--paper)}
+.map-legend li.sub{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.attrib{font-size:11px;color:var(--muted);padding:6px 10px}
+@media (max-width:720px){.map{grid-template-columns:1fr}.map-legend{border-left:0;border-top:1px solid var(--rule)}}
+
+/* Lodging */
+.stays{display:grid;gap:26px}
+.stay-block{display:grid;gap:12px}
+.stay-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.stay-head h3{font-size:18px;font-weight:700;display:flex;gap:10px;align-items:baseline}
+.stay-head h3 span{font-family:var(--display);font-weight:400;color:var(--c)}
+.stay-head .mkt{font-size:13px;color:var(--muted)}
+.bnbs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:760px){.bnbs{grid-template-columns:1fr}}
+.bnb-card{background:var(--card);border:1px solid var(--rule);border-radius:12px;overflow:hidden;display:grid;grid-template-rows:auto 1fr;position:relative}
+.bnb-card.sel{border:2px solid var(--c)}
+.bnb-card img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.bnb-body{padding:12px 14px;display:grid;gap:6px;align-content:start}
+.bnb-lvl{position:absolute;top:10px;left:10px;background:var(--card);color:var(--ink);font-size:12px;font-weight:500;padding:2px 9px;border-radius:999px}
+.bnb-card.sel .bnb-lvl{background:var(--c);color:var(--pin-ink)}
+.bnb-title{font-weight:700;font-size:15px;line-height:1.3}
+.bnb-sub{font-size:13px;color:var(--muted);line-height:1.4}
+.bnb-meta{font-size:13px;display:flex;gap:6px 12px;flex-wrap:wrap}
+.bnb-price{display:flex;justify-content:space-between;align-items:baseline;gap:8px;border-top:1px solid var(--rule);padding-top:8px;margin-top:2px;flex-wrap:wrap}
+.bnb-price b{font-family:var(--mono);font-size:18px;font-weight:500}
+.bnb-price small{font-size:12px;color:var(--muted)}
+.bnb-link{font-size:13px}
+
+/* Day cards */
+.days{display:grid;gap:22px}
+.day{background:var(--card);border:1px solid var(--rule);border-radius:14px;display:grid;grid-template-columns:168px 1fr;overflow:hidden}
+.day-side{padding:20px 18px;border-right:1px solid var(--rule);display:grid;align-content:start;gap:10px;justify-items:start;background:var(--soft)}
+.day-date{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.day-num{font-family:var(--display);font-size:30px;line-height:1;color:var(--c)}
+.stamp{width:124px;height:124px;color:var(--c);transform:rotate(-4deg)}
+.day-main{padding:20px 22px;display:grid;gap:14px;min-width:0}
+.gallery{display:grid;grid-template-columns:2fr 1fr;grid-auto-rows:1fr;gap:6px;border-radius:10px;overflow:hidden}
+.gallery.one{grid-template-columns:1fr}
+.gallery figure{margin:0;position:relative;min-width:0}
+.gallery img{width:100%;height:100%;object-fit:cover}
+.gallery .big{grid-row:span 2;aspect-ratio:16/10}
+.gallery.one .big{aspect-ratio:21/9}
+.gallery.two .small{grid-row:span 2;aspect-ratio:auto}
+.gallery .small{aspect-ratio:16/10}
+.gallery figcaption{position:absolute;left:0;bottom:0;right:0;padding:14px 10px 6px;font-size:12px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.65))}
+.day-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+.day-head h3{font-size:21px;font-weight:700}
+.day-head .base{font-size:13px;color:var(--muted)}
+.tt{width:100%;border-collapse:collapse;font-size:14px}
+.tt td{padding:8px 6px;border-top:1px solid var(--rule);vertical-align:top}
+.tt tr:first-child td{border-top:0}
+.tt .h{font-family:var(--mono);white-space:nowrap;color:var(--c);font-weight:500;width:74px}
+.tt .what b{font-weight:700}
+.tt .what small{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+.tt .cost{text-align:right;white-space:nowrap;font-family:var(--mono);font-variant-numeric:tabular-nums;width:1%}
+.tt .cost .y{display:block;color:var(--muted);font-size:12px}
+.tt tr.opt td{opacity:.6}
+.tt tr.opt.on td{opacity:1}
+.tt-wrap{overflow-x:auto}
+.day-foot{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between;align-items:baseline;border-top:2px solid var(--c);padding-top:12px}
+.day-foot .stay{font-size:13px;color:var(--muted);min-width:0}
+.day-foot .stay b{color:var(--ink);font-weight:500}
+.day-total{font-family:var(--mono);font-size:20px;font-weight:500}
+.day-total small{font-size:12px;color:var(--muted);font-weight:400;margin-left:6px}
+.note{font-size:13px;background:var(--soft);border-radius:8px;padding:10px 12px}
+.note b{font-weight:700}
+@media (max-width:700px){
+  .day{grid-template-columns:1fr}
+  .day-side{border-right:0;border-bottom:1px solid var(--rule);grid-template-columns:auto 1fr;align-items:center;column-gap:16px}
+  .stamp{width:88px;height:88px}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery .big{grid-column:1/-1;grid-row:auto}
+  .gallery.two .small{grid-column:1/-1;grid-row:auto;aspect-ratio:16/10}
+}
+
+/* Tables */
+.box{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:6px 8px;overflow-x:auto}
+.sum{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+.sum th,.sum td{padding:9px 10px;border-bottom:1px solid var(--rule);text-align:right}
+.sum th:first-child,.sum td:first-child{text-align:left}
+.sum th{font-weight:500;color:var(--muted);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.sum td{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.sum td:first-child{font-family:var(--body)}
+.sum td small{display:block;font-size:11px;color:var(--muted)}
+.sum tr.tot td{font-weight:500;border-bottom:2px solid var(--ink)}
+.sum th.cur,.sum td.cur{background:var(--soft)}
+
+/* Food + bookings */
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.food{background:var(--card);border:1px solid var(--rule);border-top:4px solid var(--c);border-radius:0 0 12px 12px;padding:16px 18px;display:grid;gap:8px;align-content:start}
+.food h3{font-size:17px;font-weight:700;display:flex;gap:10px;align-items:baseline}
+.food h3 span{font-family:var(--display);font-weight:400;color:var(--c)}
+.food ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:14px}
+.food li{display:flex;justify-content:space-between;gap:10px}
+.food li .p{font-family:var(--mono);color:var(--muted);white-space:nowrap;font-size:13px}
+.book{list-style:none;margin:0;padding:0;background:var(--card);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+.book li{display:grid;grid-template-columns:170px 1fr;gap:14px;padding:12px 18px;border-top:1px solid var(--rule)}
+.book li:first-child{border-top:0}
+.book .when{font-family:var(--mono);font-size:13px;color:var(--busan);font-weight:500}
+@media (max-width:560px){.book li{grid-template-columns:1fr;gap:2px}}
+.fine{font-size:13px;color:var(--muted);display:grid;gap:8px;max-width:76ch}
+.fine p{margin:0}
+.fine ul{margin:0;padding-left:18px;display:grid;gap:3px}
+.map-frame svg.route{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.pin.dim{opacity:.35}
+.daychips{display:flex;flex-wrap:wrap;gap:6px}
+.daychips button{font:500 12px/1 var(--body);padding:6px 10px;border-radius:999px;border:1px solid var(--rule);background:var(--card);color:var(--muted);cursor:pointer}
+.daychips button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.routetxt{margin:0;font-size:12px;color:var(--muted);line-height:1.5}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;align-items:start}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.tile{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:16px 18px;display:grid;gap:4px}
+.tile b{font-family:var(--mono);font-size:30px;font-weight:500;line-height:1.1;font-variant-numeric:tabular-nums}
+.tile small{font-size:12px;color:var(--muted)}
+.num{font:500 16px var(--mono);padding:8px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink);width:100%}
+.err{color:#B3261E;font-size:13px;min-height:1em}
+.foodgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.dish{background:var(--card);border:1px solid var(--rule);border-top:4px solid var(--c);border-radius:0 0 12px 12px;overflow:hidden;display:grid}
+.dish img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.dish div{padding:10px 12px;display:grid;gap:2px}
+.dish b{font-size:15px}
+.dish span{font-size:12px;color:var(--muted)}
+.dish em{font-style:normal;font-family:var(--mono);font-size:13px}
+.sum tr.txt td{font-family:var(--body)}
+.sum.compact{min-width:0}
+.sum.compact td:nth-child(2),.sum.compact th:nth-child(2){text-align:left;font-family:var(--body)}
+.vote-box{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:16px 18px;display:grid;gap:12px;align-content:start;min-width:0}
+.vote-h{font-size:16px;font-weight:700}
+.vote-mine{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px}
+.vote-mine div{display:grid;gap:2px;background:var(--soft);border-radius:8px;padding:8px 10px}
+.vote-mine span{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.vote-mine b{font-size:15px}
+.vote-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn{font:500 14px var(--body);padding:9px 16px;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;text-decoration:none;display:inline-block}
+.btn.alt{background:var(--card);color:var(--ink);border-color:var(--rule)}
+.btn:disabled{opacity:.5;cursor:default}
+.vote-status{font-size:13px;color:var(--muted);margin:0}
+textarea.num{font:400 13px/1.5 var(--body);resize:vertical}
+.tally{display:grid;gap:6px;margin-bottom:10px}
+.bar{display:grid;grid-template-columns:100px 1fr 24px;gap:8px;align-items:center;font-size:13px}
+.bar i{display:block;height:10px;border-radius:5px;background:var(--soft);position:relative;overflow:hidden}
+.bar i::after{content:"";position:absolute;inset:0 auto 0 0;width:var(--w);background:var(--busan);border-radius:5px}
+.bar b{font-family:var(--mono);text-align:right}
+.vote-list{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:13px}
+@media (prefers-reduced-motion:no-preference){.stamp{transition:transform .2s}.day:hover .stamp{transform:rotate(0deg)}}
+.chip.s{background:color-mix(in srgb,var(--beauty) 14%,transparent);color:var(--beauty)}
+.map.wide .map-frame{max-width:560px;width:100%;margin-inline:auto}
+#med-list li b{color:var(--beauty)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="ticket" aria-label="Resumen del viaje">
+ <div class="ticket-main">
+  <div class="eyebrow">Viaje grupal · propuesta · ruta por Canadá · skin care y chequeo médico</div>
+  <div class="route"><span class="city">Quito</span><span class="arrow">→</span><span class="kanji">서울</span><span class="city">Seúl</span></div>
+  <div class="meta">
+   <span>Salida <b id="m-dep">vie 10 sep 2027</b></span>
+   <span>En Corea <b id="m-jp">12 sep al 21 sep</b></span>
+   <span>Regreso a Quito <b id="m-ret">mié 22 sep</b></span>
+   <span>Viajeros <b>6</b></span>
+   <span>Tipo de cambio <b>₩1.350 = US$1</b></span>
+  </div>
+ </div>
+ <div class="ticket-stub" aria-live="polite">
+  <div class="eyebrow">Total por persona</div>
+  <div class="stub-total" id="t-pp">–</div>
+  <div class="stub-sub" id="t-grp"></div>
+  <div class="stub-sub" id="t-split"></div>
+ </div>
+</header>
+
+<section class="controls" aria-label="Ajustes del presupuesto">
+ <div class="ctl"><span>Mes del viaje</span>
+  <div class="seg" role="radiogroup" aria-label="Mes del viaje">
+   <label><input type="radio" name="mon" id="mon-ago" value="ago"><span>Agosto</span></label>
+   <label><input type="radio" name="mon" id="mon-sep" value="sep" checked><span>Septiembre</span></label>
+   <label><input type="radio" name="mon" id="mon-oct" value="oct"><span>Octubre</span></label>
+  </div></div>
+ <div class="ctl"><span>Hospedaje</span>
+  <div class="seg" role="radiogroup" aria-label="Nivel de hospedaje">
+   <label><input type="radio" name="lvl" id="lvl-0" value="0"><span>Económico</span></label>
+   <label><input type="radio" name="lvl" id="lvl-1" value="1" checked><span>Medio</span></label>
+   <label><input type="radio" name="lvl" id="lvl-2" value="2"><span>Alto</span></label>
+  </div></div>
+ <div class="ctl"><span>Traslados con valijas</span>
+  <div class="seg" role="radiogroup" aria-label="Traslados con valijas">
+   <label><input type="radio" name="mode" id="mode-tren" value="tren" checked><span>Tren y bus</span></label>
+   <label><input type="radio" name="mode" id="mode-taxi" value="taxi"><span>Taxi</span></label>
+  </div></div>
+ <div class="ctl"><span>Chequeo médico (por persona)</span>
+  <div class="seg" role="radiogroup" aria-label="Paquete de chequeo médico">
+   <label><input type="radio" name="med" id="med-none" value="none"><span>No</span></label>
+   <label><input type="radio" name="med" id="med-basico" value="basico" checked><span>Básico</span></label>
+   <label><input type="radio" name="med" id="med-estandar" value="estandar"><span>Estándar</span></label>
+   <label><input type="radio" name="med" id="med-premium" value="premium"><span>Premium</span></label>
+  </div></div>
+ <label class="check"><input type="checkbox" id="opt"> Incluir opcionales</label>
+</section>
+<div class="legend" style="margin-top:-30px"><span class="chip v">validado</span> consultado el 10 nov 2026 <span class="chip e">estimado</span> referencia a confirmar <span class="chip e">consultado 10 nov · 1 adulto</span> vuelo sin cupo grupal confirmado <span class="chip e" style="opacity:.8">proyección</span> octubre sin cotizar <span class="chip o">opcional</span> <span class="chip s">por persona</span> chequeo según el paquete elegido</div>
+<div class="month-note" id="month-note" style="margin-top:-24px"></div>
+
+<section id="votar">
+ <div class="sec-head"><h2>Votá tus opciones</h2><p>Elegí arriba el mes, el hospedaje, los traslados y tu chequeo, escribí tu nombre y mandá tu elección al grupo por WhatsApp.</p></div>
+ <div class="grid2">
+  <div class="vote-box">
+   <div class="vote-mine" id="vote-mine"></div>
+   <div class="vote-actions">
+    <button type="button" class="btn" id="vote-save" hidden>Guardar mi voto</button>
+    <span class="vote-status" id="vote-status" aria-live="polite">El mensaje se arma con lo que elegiste arriba.</span>
+   </div>
+   <div class="ctl"><span>Tu nombre (para el mensaje)</span><input type="text" id="vote-name" class="num" maxlength="40" placeholder="Ej.: Pablo"></div>
+   <div class="vote-actions">
+    <a class="btn alt" id="vote-wa" href="https://wa.me/" target="_blank" rel="noopener">Enviar por WhatsApp ↗</a>
+    <button type="button" class="btn alt" id="vote-copy">Copiar texto</button>
+   </div>
+   <textarea id="vote-text" class="num" rows="4" readonly aria-label="Texto para enviar al grupo"></textarea>
+  </div>
+  <div class="vote-box" id="vote-tally"><p class="vote-status">Todavía nadie guardó su voto en la página.</p></div>
+ </div>
+ <ul class="vote-list" id="vote-list"></ul>
+</section>
+
+<section class="linemap" aria-label="Ruta en tren">
+ <ol class="line">
+  <li style="--c:var(--seoul)"><span class="st">서울</span><span class="lat">Seúl</span><span class="n" id="ln-0"></span></li>
+  <li style="--c:var(--gyeongju)"><span class="st">경주</span><span class="lat">Gyeongju</span><span class="n" id="ln-1"></span></li>
+  <li style="--c:var(--busan)"><span class="st">부산</span><span class="lat">Busan</span><span class="n" id="ln-2"></span></li>
+  <li style="--c:var(--seoul)"><span class="st">서울</span><span class="lat">Seúl · Gangnam</span><span class="n" id="ln-3"></span></li>
+ </ol>
+</section>
+
+<section>
+ <div class="sec-head"><h2>Mapas de la ruta</h2><p>Los círculos numerados son los lugares en el orden en que se visitan; los cuadrados oscuros, los Airbnb (E económico, M medio, A alto). Elegí un día para ver su recorrido.</p></div>
+ <div class="fine" style="max-width:none"><p><b>Cómo se armó la ruta.</b> Seúl → Gyeongju → Busan → Seúl entrando y saliendo por Incheon, con KTX entre ciudades. Cuatro decisiones:</p><ul>
+  <li>La primera base es <b>Myeongdong</b>: la línea 4 llega desde la Estación de Seúl (AREX y KTX) y quedan a pie el teleférico de Namsan, Olive Young y la zona de palacios.</li>
+  <li>El <b>chequeo médico</b> va temprano en el viaje (día 3), en Gwanghwamun, a 10 minutos de la base. En septiembre se corre al día 9 por Chuseok.</li>
+  <li>Gyeongju tiene una sola noche: Bulguksa y Seokguram se ven a la mañana siguiente y desde ahí se sigue en bus a Busan.</li>
+  <li>La <b>clínica dermatológica</b> va al final, en Gangnam: después de un láser conviene no tomar sol ni ir a la playa.</li>
+ </ul></div>
+ <div class="maps" id="maps"></div>
+</section>
+
+<section>
+ <div class="sec-head"><h2>Dónde dormir</h2><p>Casas o departamentos enteros para 6 con al menos 2 baños, buscados en Airbnb para las fechas exactas el 10 nov 2026. El precio es el total que mostró Airbnb para la estadía.</p></div>
+ <div class="stays" id="stays"></div>
+</section>
+
+<section>
+ <div class="sec-head"><h2>Cómo moverse: tren, bus o taxi</h2><p>Para todo lo demás, metro y buses con tarjeta T-money o WOWPASS (~$4 por día, ya incluido). La decisión real es qué hacer en los tramos con valijas.</p></div>
+ <div class="grid2">
+  <div class="fine">
+   <p><b>Taxis en Corea:</b> un taxi común lleva 4 personas con poco equipaje. Para 6 con valijas hacen falta <b>dos autos</b> o un <b>jumbo taxi</b> (van de hasta 9 plazas, cuesta más). Se piden con Kakao T o Uber, que en Corea funciona con taxis locales; ambos aceptan tarjetas extranjeras.</p>
+   <p><b>Entre ciudades:</b> KTX Seúl–Gyeongju y Busan–Seúl con asiento reservado (Korail tiene página en inglés para extranjeros). Gyeongju–Busan se hace en bus interurbano directo a Haeundae.</p>
+   <p><b>Alternativa a los taxis:</b> mandar las valijas grandes entre alojamientos con un servicio de envío de equipaje (T-luggage o similares) y viajar livianos.</p>
+   <p>Los precios de taxi de cada tramo son estimados por distancia y ya están divididos entre 6.</p>
+  </div>
+  <div style="display:grid;gap:10px;min-width:0">
+   <div class="box"><table class="sum compact" id="moves"></table></div>
+   <p class="fine">Diferencia de ir en taxi: <b id="moves-diff"></b></p>
+  </div>
+ </div>
+</section>
+
+<section id="belleza">
+ <div class="sec-head"><h2>Skin care y chequeo médico</h2><p>Lo que convierte este viaje en algo distinto. Cada persona elige su paquete de chequeo arriba; skin care y spa ya están en el presupuesto base.</p></div>
+ <div class="grid2">
+  <div class="fine">
+   <p><b>Chequeo médico completo (건강검진).</b> Los grandes hospitales de Seúl tienen centros internacionales con paquetes para extranjeros: KMI (Gwanghwamun), Severance, Seoul St. Mary's, Samsung Medical Center o Asan. Los precios del paquete elegido aparecen en el día del chequeo.</p>
+   <ul id="med-list"></ul>
+   <p>En ayunas desde las 21:00 del día anterior. Se reserva por correo o WhatsApp con 3 a 6 semanas, enviando el pasaporte. Intérprete de inglés incluido; para español, pedirlo al reservar. Los resultados llegan en 1 a 2 semanas por correo, en inglés. No lo cubre el seguro de viaje.</p>
+  </div>
+  <div class="fine">
+   <p><b>Clínica dermatológica.</b> En Sinsa, Apgujeong y Gangnam están las clínicas con más experiencia en extranjeros. Presupuesto base: consulta + un tratamiento (láser toning o Aqua Peel), unos ₩80.000–300.000. Rejuran y skin boosters cuestan ₩200.000–500.000 por sesión (opcional). Gangnam cobra 10–20% más que Myeongdong o Hongdae. <b>Desde el 1 de enero de 2026 los tratamientos estéticos ya no tienen devolución de IVA.</b></p>
+   <p><b>Facial y spa.</b> Un facial coreano de 60–90 minutos en Cheongdam (~₩120.000, estimado) y una tarde de jjimjilbang en Spa Land Centum City de Busan.</p>
+   <p><b>Compras K-beauty.</b> Olive Young (Myeongdong y Gangnam) y las tiendas de marca. La devolución de impuesto es inmediata en la tienda desde ₩15.000 por compra, con el pasaporte físico. Quedan como opcional (~$110 por persona).</p>
+   <p><b>Orden pensado:</b> chequeo al principio (resultados a tiempo para consultar dudas antes de volver) y láser al final (sin sol de playa después).</p>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="sec-head"><h2>Día por día</h2><p>Horarios sugeridos y costo por persona de cada actividad. El total del día incluye la noche de hospedaje.</p></div>
+ <div class="days" id="days"></div>
+</section>
+
+<section>
+ <div class="sec-head"><h2>Agosto, septiembre u octubre</h2><p>Mismo itinerario y mismos días de la semana, corrido 4 u 8 semanas. Cambia el vuelo, el hospedaje y lo que pasa en Corea esas fechas.</p></div>
+ <div class="box"><table class="sum" id="months"></table></div>
+ <div class="fine"><p><b>Vuelos consultados el 10 nov 2026 en Google Flights, para un adulto.</b> Misma lógica que Japón: Avianca Quito–Bogotá–Toronto y, en otro boleto, Korean Air directo Toronto–Incheon (15 h). Septiembre: $787 + $1.076. Agosto: $895 + $1.235. Octubre todavía no tiene vuelos a la venta para estas fechas. El total grupal es una multiplicación, no una cotización para seis. No se reservó nada. <a href="https://www.google.com/travel/flights?q=Flights%20from%20YYZ%20to%20ICN%20on%202027-09-11%20through%202027-09-21&amp;hl=es&amp;curr=USD" target="_blank" rel="noopener">Reconsultar Toronto–Seúl ↗</a></p>
+ <p><b>Otras rutas que aparecieron.</b> Vía Atlanta con Delta + Korean Air desde $2.379 y vía Nueva York o Houston desde $1.958, pero todas requieren visa de Estados Unidos. Sin pasar por EE.UU.: Iberia + Qatar vía Madrid y Doha, $2.871. Si el grupo ya tiene la visa canadiense para Japón, la ruta por Toronto es la más barata.</p>
+ <p><b>Hospedaje:</b> precios de Airbnb consultados el 10 nov 2026 para las tres fechas. En Seúl y Gyeongju muchos anuncios publicaron el mismo precio para los tres meses; en Busan septiembre sale más barato que agosto.</p></div>
+</section>
+
+<section>
+ <div class="sec-head"><h2>Presupuesto por persona</h2><p id="sum-sub"></p></div>
+ <div class="box"><table class="sum" id="sum"></table></div>
+</section>
+
+<section>
+ <div class="sec-head"><h2>Cuánto ahorrar por mes</h2><p>Plan por persona desde noviembre de 2026, en el orden en que hay que pagar: primero la visa canadiense y los vuelos (en febrero, con las visas aprobadas), después las reservas con fecha, Airbnb y KTX, y al final el efectivo del viaje. Incluye 10% de imprevistos.</p></div>
+ <div class="ctl" style="max-width:320px"><span>Ya ahorrado por persona (USD)</span><input type="number" id="saved" min="0" step="50" value="0" inputmode="decimal" class="num"><small id="saved-err" class="err" aria-live="polite"></small></div>
+ <div id="savings" style="display:grid;gap:14px"></div>
+</section>
+
+<section>
+ <div class="sec-head"><h2>Qué completa la proyección</h2><p>Lo que ya se agregó al total y lo que todavía conviene confirmar.</p></div>
+ <div class="grid2">
+  <div class="fine"><p><b>Agregado al total</b> (estimado):</p><ul>
+   <li>Seguro de viaje para 12 días: ~$60</li>
+   <li>Valija despachada en Avianca ida y vuelta, si la tarifa básica no la incluye: ~$100 (Korean Air incluye valija)</li>
+   <li>eSIM coreana: ~$20</li>
+   <li>Comisión de tarjeta y cambio: ~2,5% de lo que se gasta en Corea</li>
+   <li>K-ETA: ~₩10.000 (~$8) por persona</li>
+   <li>Fondo de imprevistos del 10% en el plan de ahorro</li>
+  </ul></div>
+  <div class="fine"><p><b>Pendiente de confirmar</b>:</p><ul>
+   <li><b>Entrada a Corea:</b> los ecuatorianos no necesitan visa para estadías de hasta 90 días, pero sí la K-ETA. Confirmar en k-eta.go.kr antes de comprar vuelos; las fuentes no oficiales se contradicen</li>
+   <li>Visa canadiense aprobada para los 6: sin eso, la ruta por Toronto no sirve</li>
+   <li>Precio exacto del paquete de chequeo en el centro elegido (los montos son rangos de referencia)</li>
+   <li>Precio de la clínica dermatológica después de la consulta: depende de la piel de cada uno</li>
+   <li>Tarifa actual del KTX: hubo un ajuste en 2026 que no se pudo confirmar en Korail</li>
+   <li>Tipo de cambio: si el won se mueve 10%, el gasto en Corea cambia ~$110 por persona</li>
+   <li>Horarios de 2027 de Avianca y Korean Air (conexión de ~5 h en Toronto, con dos boletos)</li>
+   <li>No incluye compras ni recuerdos, salvo el opcional de cosmética</li>
+  </ul></div>
+ </div>
+</section>
+
+<section>
+ <div class="sec-head"><h2>Qué comer en cada ciudad</h2><p>Precios orientativos por plato. La comida diaria del presupuesto ronda ₩50.000–60.000 por persona; el día en que aparece cada plato está indicado.</p></div>
+ <div class="foodgrid">
+  <article class="dish" style="--c:var(--seoul)"><img src="img/food/tteokbokki.jpg" alt="Tteokbokki" loading="lazy"><div><b>Tteokbokki y hotteok</b><span>Myeongdong · día 1</span><em>₩3.000–5.000</em></div></article>
+  <article class="dish" style="--c:var(--seoul)"><img src="img/food/bindaetteok.jpg" alt="Bindaetteok" loading="lazy"><div><b>Bindaetteok</b><span>Mercado Gwangjang · día 2</span><em>₩5.000–7.000</em></div></article>
+  <article class="dish" style="--c:var(--seoul)"><img src="img/food/gimbap.jpg" alt="Gimbap" loading="lazy"><div><b>Gimbap</b><span>Desayunos y Gwangjang</span><em>₩3.000–5.000</em></div></article>
+  <article class="dish" style="--c:var(--seoul)"><img src="img/food/bibimbap.jpg" alt="Bibimbap" loading="lazy"><div><b>Bibimbap</b><span>Insadong · día 2</span><em>₩10.000–14.000</em></div></article>
+  <article class="dish" style="--c:var(--seoul)"><img src="img/food/samgyeopsal.jpg" alt="Samgyeopsal a la parrilla" loading="lazy"><div><b>Samgyeopsal</b><span>Seúl · día 3</span><em>₩18.000–30.000</em></div></article>
+  <article class="dish" style="--c:var(--gyeongju)"><img src="img/food/gyeongjubread.jpg" alt="Pan de Gyeongju" loading="lazy"><div><b>Pan de Gyeongju</b><span>Hwangridan-gil · día 4</span><em>₩1.000 por unidad</em></div></article>
+  <article class="dish" style="--c:var(--busan)"><img src="img/food/gukbap.jpg" alt="Dwaeji gukbap" loading="lazy"><div><b>Dwaeji gukbap</b><span>Haeundae · día 5</span><em>₩10.000–12.000</em></div></article>
+  <article class="dish" style="--c:var(--busan)"><img src="img/food/hoe.jpg" alt="Hoe, pescado crudo" loading="lazy"><div><b>Hoe en Jagalchi</b><span>Busan · día 6</span><em>₩30.000–40.000</em></div></article>
+  <article class="dish" style="--c:var(--busan)"><img src="img/food/hotteok.jpg" alt="Hotteok" loading="lazy"><div><b>Ssiat hotteok</b><span>BIFF · día 6</span><em>₩2.000–3.000</em></div></article>
+  <article class="dish" style="--c:var(--busan)"><img src="img/food/eomuk.jpg" alt="Eomuk" loading="lazy"><div><b>Eomuk</b><span>Mercados de Busan</span><em>₩1.000–2.000</em></div></article>
+  <article class="dish" style="--c:var(--busan)"><img src="img/food/chimaek.jpg" alt="Pollo frito con cerveza" loading="lazy"><div><b>Chimaek</b><span>Gwangalli · día 6</span><em>₩20.000 por pollo</em></div></article>
+  <article class="dish" style="--c:var(--busan)"><img src="img/food/milmyeon.jpg" alt="Milmyeon" loading="lazy"><div><b>Milmyeon</b><span>Busan · día 7</span><em>₩9.000–11.000</em></div></article>
+  <article class="dish" style="--c:var(--seoul)"><img src="img/food/sundubu.jpg" alt="Sundubu jjigae" loading="lazy"><div><b>Sundubu jjigae</b><span>Gangnam · día 8</span><em>₩10.000–13.000</em></div></article>
+  <article class="dish" style="--c:var(--seoul)"><img src="img/food/bingsu.jpg" alt="Bingsu" loading="lazy"><div><b>Bingsu</b><span>Postre de cualquier tarde</span><em>₩12.000–16.000</em></div></article>
+ </div>
+</section>
+
+<section>
+ <div class="sec-head"><h2>Qué reservar y cuándo</h2><p>Las fechas de apertura de venta son referencias habituales; confirmen en cada sitio oficial.</p></div>
+ <ol class="book">
+  <li><span class="when">Ya</span><span>Visa canadiense de visitante para los 6 (si no la sacaron para Japón). No comprar vuelos sin visas aprobadas.</span></li>
+  <li><span class="when">Antes de comprar vuelos</span><span>Confirmar en k-eta.go.kr si los ecuatorianos necesitan K-ETA en 2027.</span></li>
+  <li><span class="when">Cuanto antes</span><span>Los cuatro Airbnb. Muchos permiten reservar con cancelación gratuita.</span></li>
+  <li><span class="when">~2 meses antes</span><span>Chequeo médico: elegir centro y paquete, mandar pasaportes y fecha. Pedir intérprete y el instructivo de ayuno.</span></li>
+  <li><span class="when">3–4 semanas antes</span><span>Clínica dermatológica y facial en Gangnam (Creatrip u otra plataforma con traductor). K-ETA, al menos 72 h antes del vuelo.</span></li>
+  <li><span class="when">1 mes antes</span><span>KTX Seúl–Singyeongju y Busan–Seúl en Korail. En septiembre (Chuseok) comprar el mismo día en que abre la venta.</span></li>
+  <li><span class="when">Antes de viajar</span><span>eSIM, WOWPASS o T-money, y apps Kakao T, Naver Map y Papago. e-Arrival Card en línea.</span></li>
+ </ol>
+</section>
+
+<section class="fine" aria-label="Supuestos y créditos">
+ <p><b>Supuestos.</b> Precios por persona en USD con ₩1.350 por dólar (5 nov 2026). Vuelos de agosto y septiembre consultados en Google Flights el 10 nov 2026 para un adulto, en dos boletos separados; octubre es una proyección. Visa de Canadá ~$135 y K-ETA ~$8. Airbnb consultado el 10 nov 2026. Chequeo médico, clínica dermatológica y facial: rangos de referencia de centros y blogs de 2025–2026, a confirmar con cada lugar. Horarios en hora local. Todo lo marcado como estimado es una referencia a confirmar.</p>
+ <p><b>No incluye</b> compras ni recuerdos (salvo el opcional de cosmética).</p>
+ <p><b>Fotos de lugares y comida</b> de Wikimedia Commons:</p>
+ <ul id="credits"></ul>
+ <p><b>Fotos de alojamientos</b> de los anuncios en Airbnb, publicadas por cada anfitrión; cada tarjeta enlaza al anuncio original. <b>Mapas</b> © colaboradores de OpenStreetMap (openstreetmap.org/copyright).</p>
+</section>
+</div>
+
+<script>
+(function(){
+  var DATA = {"picks": {"s1": {"nights": 3, "area": "Myeongdong e Insadong", "list": [{"id": "35204719", "title": "Departamento en Myeongdong", "sub": "WeStay, a pasos de Myeongdong y del teleférico de Namsan", "beds": "3 hab · 8 camas · 2 baños", "rating": "4.95 (240)", "img": "img/airbnb/s1_0.jpg", "m": {"ago": {"total": 592, "pp_night": 32.89, "src": "real"}, "sep": {"total": 592, "pp_night": 32.89, "src": "real"}, "oct": {"total": 592, "pp_night": 32.89, "src": "real"}}}, {"id": "52818051", "title": "Hanok en Insadong", "sub": "Casa tradicional coreana a 1 min de la estación Anguk", "beds": "3 hab · 5 camas · 2 baños", "rating": "4.96 (73)", "img": "img/airbnb/s1_1.jpg", "m": {"ago": {"total": 1197, "pp_night": 66.5, "src": "real"}, "sep": {"total": 1197, "pp_night": 66.5, "src": "real"}, "oct": {"total": 1197, "pp_night": 66.5, "src": "real"}}}, {"id": "1389794996044078973", "title": "Namsan Serenity", "sub": "A 5 min de la estación, sin cuestas, entre Myeongdong y DDP", "beds": "3 hab · 4 camas · 2 baños", "rating": "5.0 (83)", "img": "img/airbnb/s1_2.jpg", "m": {"ago": {"total": 1266, "pp_night": 70.33, "src": "real"}, "sep": {"total": 1266, "pp_night": 70.33, "src": "real"}, "oct": {"total": 1266, "pp_night": 70.33, "src": "real"}}}]}, "gy": {"nights": 1, "area": "Centro, cerca de Hwangridan-gil", "list": [{"id": "1704147293276789033", "title": "Casa entera en Gyeongju", "sub": "Dúplex a 5 min del mercado Seongdong y 10 min de Hwangridan-gil", "beds": "2 hab · 4 camas queen · 2 baños", "rating": "4.94 (17)", "img": "img/airbnb/gy_0.jpg", "m": {"ago": {"total": 179, "pp_night": 29.83, "src": "real"}, "sep": {"total": 179, "pp_night": 29.83, "src": "real"}, "oct": {"total": 179, "pp_night": 29.83, "src": "real"}}}, {"id": "1209956344740748221", "title": "Casa en el centro de Gyeongju", "sub": "Anfitrión que habla inglés, café en la planta baja", "beds": "3 hab · 3 camas · 3 baños", "rating": "4.96 (101)", "img": "img/airbnb/gy_1.jpg", "m": {"ago": {"total": 268, "pp_night": 44.67, "src": "real"}, "sep": {"total": 268, "pp_night": 44.67, "src": "real"}, "oct": {"total": 268, "pp_night": 44.67, "src": "real"}}}, {"id": "1208376649381409572", "title": "Hanok Posada de rosas", "sub": "Hanok de 4 habitaciones con cocina, cerca de los túmulos", "beds": "4 hab · 4 camas · 5 baños", "rating": "4.94 (35)", "img": "img/airbnb/gy_2.jpg", "m": {"ago": {"total": 374, "pp_night": 62.33, "src": "real"}, "sep": {"total": 374, "pp_night": 62.33, "src": "real"}, "oct": {"total": 374, "pp_night": 62.33, "src": "real"}}}]}, "bs": {"nights": 3, "area": "Haeundae y Gwangalli", "list": [{"id": "1325783302720119286", "title": "Casa en Haeundae", "sub": "A 2 min del metro y 8 min de la playa, consigna de equipaje", "beds": "4 hab · 7 camas · 2 baños", "rating": "4.88 (73)", "img": "img/airbnb/bs_0.jpg", "m": {"ago": {"total": 799, "pp_night": 44.39, "src": "real"}, "sep": {"total": 610, "pp_night": 33.89, "src": "real"}, "oct": {"total": 610, "pp_night": 33.89, "src": "real"}}}, {"id": "1596213523717396005", "title": "Casa con terraza en Gwangalli", "sub": "149 m², a 5 min de la playa de Gwangalli", "beds": "3 hab · 4 camas · 2 baños", "rating": "4.85 (13)", "img": "img/airbnb/bs_1.jpg", "m": {"ago": {"total": 1419, "pp_night": 78.83, "src": "real"}, "sep": {"total": 997, "pp_night": 55.39, "src": "real"}, "oct": {"total": 1139, "pp_night": 63.28, "src": "real"}}}, {"id": "1388285594983223802", "title": "Dúplex con vista al mar", "sub": "Piso 9 frente al puente Gwangan", "beds": "2 hab · 3 camas queen · 2 baños", "rating": "4.94 (78)", "img": "img/airbnb/bs_2.jpg", "m": {"ago": {"total": 1546, "pp_night": 85.89, "src": "real"}, "sep": {"total": 1502, "pp_night": 83.44, "src": "real"}, "oct": {"total": 1268, "pp_night": 70.44, "src": "real"}}}]}, "s2": {"nights": 2, "area": "Gangnam y Sinsa", "list": [{"id": "1243308336752595976", "title": "Departamento en Seolleung", "sub": "Gangnam, 4 habitaciones. Cuarto piso sin ascensor", "beds": "4 hab · 5 camas queen · 2 baños", "rating": "4.81 (90)", "img": "img/airbnb/s2_0.jpg", "m": {"ago": {"total": 437, "pp_night": 36.42, "src": "real"}, "sep": {"total": 437, "pp_night": 36.42, "src": "real"}, "oct": {"total": 437, "pp_night": 36.42, "src": "real"}}}, {"id": "1520071084989185102", "title": "Casa cerca de COEX", "sub": "A 3 min de la estación, 4 habitaciones y 3 baños", "beds": "4 hab · 5 camas queen · 3 baños", "rating": "4.98 (105)", "img": "img/airbnb/s2_1.jpg", "m": {"ago": {"total": 802, "pp_night": 66.83, "src": "real"}, "sep": {"total": 802, "pp_night": 66.83, "src": "real"}, "oct": {"total": 802, "pp_night": 66.83, "src": "real"}}}, {"id": "1734779004401848598", "title": "Casa en Garosu-gil", "sub": "Sinsa, a 3 min de Garosu-gil y de las clínicas", "beds": "3 hab · 5 camas queen · 2 baños", "rating": "4.87 (15)", "img": "img/airbnb/s2_2.jpg", "m": {"ago": {"total": 789, "pp_night": 65.75, "src": "real"}, "sep": {"total": 927, "pp_night": 77.25, "src": "real"}, "oct": {"total": 886, "pp_night": 73.83, "src": "real"}}}]}}, "stats": {"ago": {"s1": {"n": 18, "min": 475, "p25": 1043, "med": 1261}, "gy": {"n": 15, "min": 179, "p25": 261, "med": 344}, "bs": {"n": 18, "min": 545, "p25": 905, "med": 1372}, "s2": {"n": 16, "min": 415, "p25": 519, "med": 789}}, "sep": {"s1": {"n": 18, "min": 475, "p25": 1043, "med": 1221}, "gy": {"n": 17, "min": 179, "p25": 268, "med": 374}, "bs": {"n": 18, "min": 610, "p25": 915, "med": 1441}, "s2": {"n": 16, "min": 437, "p25": 519, "med": 802}}, "oct": {"s1": {"n": 18, "min": 475, "p25": 1043, "med": 1197}, "gy": {"n": 18, "min": 179, "p25": 261, "med": 344}, "bs": {"n": 18, "min": 610, "p25": 1139, "med": 1340}, "s2": {"n": 17, "min": 437, "p25": 519, "med": 752}}}, "maps": {"ruta": {"w": 653, "h": 686, "pts": [{"id": "incheon", "label": "Incheon", "x": 11.21, "y": 14.22, "k": "air"}, {"id": "seul", "label": "Seúl", "x": 26.19, "y": 10.67, "k": "seoul"}, {"id": "gyeongju", "label": "Gyeongju", "x": 88.82, "y": 67.29, "k": "gyeongju"}, {"id": "busan", "label": "Busan", "x": 84.66, "y": 89.35, "k": "busan"}]}, "seul": {"w": 1261, "h": 1312, "pts": [{"id": "seoulst", "label": "Estación de Seúl (AREX y KTX)", "x": 9.23, "y": 40.13, "k": "p"}, {"id": "myeongdong", "label": "Myeongdong y Olive Young", "x": 22.44, "y": 30.16, "k": "p"}, {"id": "gyeongbok", "label": "Gyeongbokgung y alquiler de hanbok", "x": 15.05, "y": 12.23, "k": "p"}, {"id": "bukchon", "label": "Bukchon Hanok", "x": 22.44, "y": 8.87, "k": "p"}, {"id": "insadong", "label": "Insadong", "x": 22.9, "y": 18.51, "k": "p"}, {"id": "gwangjang", "label": "Mercado Gwangjang", "x": 35.93, "y": 22.99, "k": "p"}, {"id": "cheonggye", "label": "Cheonggyecheon", "x": 16.9, "y": 24.11, "k": "p"}, {"id": "checkup", "label": "Centro de chequeo (Gwanghwamun)", "x": 14.13, "y": 21.42, "k": "p"}, {"id": "namsan", "label": "N Seoul Tower", "x": 25.4, "y": 44.05, "k": "p"}, {"id": "seongsu", "label": "Seongsu", "x": 88.04, "y": 51.55, "k": "p"}, {"id": "garosu", "label": "Garosu-gil (Sinsa)", "x": 57.55, "y": 77.87, "k": "p"}, {"id": "clinic", "label": "Clínicas de Sinsa y Apgujeong", "x": 64.02, "y": 72.05, "k": "p"}, {"id": "spa", "label": "Spa facial (Cheongdam)", "x": 80.46, "y": 75.41, "k": "p"}, {"id": "coex", "label": "COEX y Biblioteca Starfield", "x": 90.81, "y": 88.5, "k": "p"}, {"id": "bnb", "label": "Airbnb económico · Seúl 1", "x": 32.05, "y": 35.3, "k": "b0s1"}, {"id": "bnb", "label": "Airbnb medio · Seúl 1", "x": 22.26, "y": 15.26, "k": "b1s1"}, {"id": "bnb", "label": "Airbnb alto · Seúl 1", "x": 34.08, "y": 33.86, "k": "b2s1"}, {"id": "bnb", "label": "Airbnb económico · Seúl 2", "x": 74.59, "y": 91.17, "k": "b0s2"}, {"id": "bnb", "label": "Airbnb medio · Seúl 2", "x": 84.16, "y": 88.95, "k": "b1s2"}, {"id": "bnb", "label": "Airbnb alto · Seúl 2", "x": 59.4, "y": 74.73, "k": "b2s2"}]}, "gyeongju": {"w": 1479, "h": 679, "pts": [{"id": "singyeongju", "label": "Estación Singyeongju (KTX)", "x": 8.65, "y": 72.58, "k": "p"}, {"id": "hwangridan", "label": "Hwangridan-gil", "x": 37.0, "y": 31.64, "k": "p"}, {"id": "daereungwon", "label": "Daereungwon", "x": 37.4, "y": 30.58, "k": "p"}, {"id": "cheomseong", "label": "Cheomseongdae", "x": 40.16, "y": 34.07, "k": "p"}, {"id": "donggung", "label": "Donggung y estanque Wolji", "x": 43.15, "y": 34.07, "k": "p"}, {"id": "bulguksa", "label": "Bulguksa", "x": 84.66, "y": 81.26, "k": "p"}, {"id": "seokguram", "label": "Seokguram", "x": 91.36, "y": 76.07, "k": "p"}, {"id": "terminal", "label": "Terminal de buses de Gyeongju", "x": 33.7, "y": 28.57, "k": "p"}, {"id": "bnb", "label": "Airbnb económico · Gyeongju", "x": 38.82, "y": 18.83, "k": "b0gy"}, {"id": "bnb", "label": "Airbnb medio · Gyeongju", "x": 37.71, "y": 27.3, "k": "b1gy"}, {"id": "bnb", "label": "Airbnb alto · Gyeongju", "x": 36.06, "y": 31.21, "k": "b2gy"}]}, "busan": {"w": 1497, "h": 911, "pts": [{"id": "busanst", "label": "Estación de Busan", "x": 20.92, "y": 71.42, "k": "p"}, {"id": "gamcheon", "label": "Aldea Gamcheon", "x": 8.63, "y": 85.18, "k": "p"}, {"id": "jagalchi", "label": "Mercado Jagalchi", "x": 16.41, "y": 85.88, "k": "p"}, {"id": "haedong", "label": "Haedong Yonggungsa", "x": 91.4, "y": 14.17, "k": "p"}, {"id": "blueline", "label": "Blueline Park (Mipo)", "x": 70.65, "y": 36.78, "k": "p"}, {"id": "haeundae", "label": "Playa Haeundae", "x": 66.92, "y": 37.33, "k": "p"}, {"id": "gwangalli", "label": "Playa Gwangalli y puente Gwangan", "x": 50.69, "y": 41.63, "k": "p"}, {"id": "spaland", "label": "Spa Land Centum City", "x": 54.93, "y": 29.27, "k": "p"}, {"id": "bnb", "label": "Airbnb económico · Busan", "x": 66.06, "y": 32.4, "k": "b0bs"}, {"id": "bnb", "label": "Airbnb medio · Busan", "x": 53.96, "y": 38.58, "k": "b1bs"}, {"id": "bnb", "label": "Airbnb alto · Busan", "x": 55.48, "y": 39.91, "k": "b2bs"}]}}, "credits": {"incheon": {"title": "인천국제공항 (1472).jpeg", "page": "https://commons.wikimedia.org/wiki/File:%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD_(1472).jpeg", "artist": "Korea Aerospace Research Institute", "lic": "KOGL Type 1"}, "gyeongbok": {"title": "광화문 월대.jpg", "page": "https://commons.wikimedia.org/wiki/File:%EA%B4%91%ED%99%94%EB%AC%B8_%EC%9B%94%EB%8C%80.jpg", "artist": "서울관광 아카이브", "lic": "KOGL Type 1"}, "hanbok": {"title": "Hanbok Day 2016 29 (30467033136).jpg", "page": "https://commons.wikimedia.org/wiki/File:Hanbok_Day_2016_29_(30467033136).jpg", "artist": "Republic of Korea from Seoul, Republic of Korea", "lic": "CC BY-SA 2.0"}, "gwangjang": {"title": "Gwangjang Market, Seoul 01.jpg", "page": "https://commons.wikimedia.org/wiki/File:Gwangjang_Market,_Seoul_01.jpg", "artist": "Bgag", "lic": "CC0"}, "myeongdong": {"title": "명동8길 거리 (2020.03).jpg", "page": "https://commons.wikimedia.org/wiki/File:%EB%AA%85%EB%8F%998%EA%B8%B8_%EA%B1%B0%EB%A6%AC_(2020.03).jpg", "artist": "서울연구데이터서비스", "lic": "KOGL Type 1"}, "checkup": {"title": "Sev2018.jpg", "page": "https://commons.wikimedia.org/wiki/File:Sev2018.jpg", "artist": "Bak1999", "lic": "CC BY-SA 4.0"}, "bulguksa": {"title": "Lotus Flower Bridge and Seven Treasure Bridge at Bulguksa in Gyeongju, Korea.jpg", "page": "https://commons.wikimedia.org/wiki/File:Lotus_Flower_Bridge_and_Seven_Treasure_Bridge_at_Bulguksa_in_Gyeongju,_Korea.jpg", "artist": "Unknown authorUnknown author", "lic": "Public domain"}, "seokguram": {"title": "Front view of Seokguram from front chamber.jpg", "page": "https://commons.wikimedia.org/wiki/File:Front_view_of_Seokguram_from_front_chamber.jpg", "artist": "Seok-Hong, Han", "lic": "KOGL Type 1"}, "daereungwon": {"title": "Gyeongju - King Tomb Park - panoramio.jpg", "page": "https://commons.wikimedia.org/wiki/File:Gyeongju_-_King_Tomb_Park_-_panoramio.jpg", "artist": "dokaspar", "lic": "CC BY-SA 3.0"}, "donggung": {"title": "Water reflection of Donggung Palace in Wolji Pond at blue hour in Gyeongju South Korea.jpg", "page": "https://commons.wikimedia.org/wiki/File:Water_reflection_of_Donggung_Palace_in_Wolji_Pond_at_blue_hour_in_Gyeongju_South_Korea.jpg", "artist": "Basile Morin", "lic": "CC BY-SA 4.0"}, "gamcheon": {"title": "Gamcheon Houses, 2024.jpg", "page": "https://commons.wikimedia.org/wiki/File:Gamcheon_Houses,_2024.jpg", "artist": "Bl00dnFl4mes", "lic": "CC BY-SA 4.0"}, "jagalchi": {"title": "Jagalchi Market 20200523 019.jpg", "page": "https://commons.wikimedia.org/wiki/File:Jagalchi_Market_20200523_019.jpg", "artist": "Mobius6", "lic": "CC BY-SA 4.0"}, "haedong": {"title": "해동용궁사 사찰 전경.jpg", "page": "https://commons.wikimedia.org/wiki/File:%ED%95%B4%EB%8F%99%EC%9A%A9%EA%B6%81%EC%82%AC_%EC%82%AC%EC%B0%B0_%EC%A0%84%EA%B2%BD.jpg", "artist": "박혜민", "lic": "CC BY-SA 3.0"}, "haeundae": {"title": "Haeundae Beach May 2024.jpg", "page": "https://commons.wikimedia.org/wiki/File:Haeundae_Beach_May_2024.jpg", "artist": "Brit in Seoul", "lic": "CC BY-SA 4.0"}, "gwangan": {"title": "Gwangan Bridge1.jpg", "page": "https://commons.wikimedia.org/wiki/File:Gwangan_Bridge1.jpg", "artist": "Glabb", "lic": "Public domain"}, "garosugil": {"title": "Garosu-gil.jpg", "page": "https://commons.wikimedia.org/wiki/File:Garosu-gil.jpg", "artist": "sellyourseoul", "lic": "CC BY 2.0"}, "coex": {"title": "Starfield Library.jpg", "page": "https://commons.wikimedia.org/wiki/File:Starfield_Library.jpg", "artist": "Republic of Korea", "lic": "CC BY-SA 4.0"}, "ktx": {"title": "KTX-Sancheon.jpg", "page": "https://commons.wikimedia.org/wiki/File:KTX-Sancheon.jpg", "artist": "Minseong Kim", "lic": "CC BY-SA 4.0"}, "jjimjilbang": {"title": "Jjimjilbang.JPG", "page": "https://commons.wikimedia.org/wiki/File:Jjimjilbang.JPG", "artist": "autor en Commons", "lic": "CC BY-SA 3.0"}, "namsan": {"title": "Namsan and Namsan Tour at Dusk.jpg", "page": "https://commons.wikimedia.org/wiki/File:Namsan_and_Namsan_Tour_at_Dusk.jpg", "artist": "서울관광 아카이브", "lic": "KOGL Type 1"}}, "foodCredits": {"samgyeopsal": {"title": "Samgyeopsal-gui.jpg", "page": "https://commons.wikimedia.org/wiki/File:Samgyeopsal-gui.jpg", "artist": "jinsoo jang", "lic": "CC0"}, "bibimbap": {"title": "Dolsot-bibimbap.jpg", "page": "https://commons.wikimedia.org/wiki/File:Dolsot-bibimbap.jpg", "artist": "Sous Chef", "lic": "CC BY 2.0"}, "tteokbokki": {"title": "Tteokbokki.JPG", "page": "https://commons.wikimedia.org/wiki/File:Tteokbokki.JPG", "artist": "Popo le Chien", "lic": "CC0"}, "gimbap": {"title": "Gimbap (pixabay).jpg", "page": "https://commons.wikimedia.org/wiki/File:Gimbap_(pixabay).jpg", "artist": "changupn", "lic": "CC0"}, "hotteok": {"title": "Hotteok.jpg", "page": "https://commons.wikimedia.org/wiki/File:Hotteok.jpg", "artist": "Korea.net / Korean Culture and Information Service", "lic": "CC BY-SA 2.0"}, "bindaetteok": {"title": "Korea GwangjangMarket Eats 11 Bindaetteok.jpg", "page": "https://commons.wikimedia.org/wiki/File:Korea_GwangjangMarket_Eats_11_Bindaetteok.jpg", "artist": "Korea.net / Korean Culture and Information Service", "lic": "CC BY-SA 2.0"}, "gyeongjubread": {"title": "Hwangnam bread.JPG", "page": "https://commons.wikimedia.org/wiki/File:Hwangnam_bread.JPG", "artist": "ProjectManhattan", "lic": "CC0"}, "gukbap": {"title": "Dwaeji-gukbap.jpg", "page": "https://commons.wikimedia.org/wiki/File:Dwaeji-gukbap.jpg", "artist": "http://blog.daum.net/wjlee4284 사이팔사]", "lic": "CC BY 2.0 kr"}, "milmyeon": {"title": "Korean cold noodle soup-Milmyeon-01.jpg", "page": "https://commons.wikimedia.org/wiki/File:Korean_cold_noodle_soup-Milmyeon-01.jpg", "artist": "by shizu k (shezzz) at Flickr", "lic": "CC BY-SA 2.0"}, "eomuk": {"title": "Fish cakes food dinner.jpg", "page": "https://commons.wikimedia.org/wiki/File:Fish_cakes_food_dinner.jpg", "artist": "Jon Sullivan", "lic": "Public domain"}, "chimaek": {"title": "Iksan City 48 Korean Style Fried chicken.jpg", "page": "https://commons.wikimedia.org/wiki/File:Iksan_City_48_Korean_Style_Fried_chicken.jpg", "artist": "KOREA.NET", "lic": "CC BY-SA 2.0"}, "bingsu": {"title": "Patbingsu.jpg", "page": "https://commons.wikimedia.org/wiki/File:Patbingsu.jpg", "artist": "국립국어원", "lic": "CC BY-SA 2.0 kr"}, "hoe": {"title": "Hoe (raw fish).jpg", "page": "https://commons.wikimedia.org/wiki/File:Hoe_(raw_fish).jpg", "artist": "littlepepper", "lic": "CC0"}, "sundubu": {"title": "Sundubu-jjigae.jpg", "page": "https://commons.wikimedia.org/wiki/File:Sundubu-jjigae.jpg", "artist": "행복한 초록개구리", "lic": "CC BY 4.0"}}};
+  var RATE = 1350;
+  var MONTHS = {
+    ago:{name:"Agosto", start:[2027,7,13], flight:{v:2130, lo:2130, hi:2130, src:"r"},
+      out:["Vie 18:50","Sáb 12:55"],
+      fdesc:"Avianca Quito–Toronto $895 + Korean Air Toronto–Incheon directo $1.235, en dos boletos (consulta del 10 nov 2026, 1 adulto) · visa de Canadá ~$135 · K-ETA ~$8",
+      note:"<b>Agosto:</b> el mes más caluroso y húmedo (~30 °C), con lluvias y posibles tifones. El domingo 15 es el Día de la Liberación y el lunes 16 es feriado sustituto: los palacios abren, pero llenos. El chequeo queda el martes 17, ya en día hábil. Vuelos consultados el 10 nov 2026 para un adulto."},
+    sep:{name:"Septiembre", start:[2027,8,10], flight:{v:1863, lo:1863, hi:1863, src:"r"},
+      out:["Vie 18:50","Sáb 12:30"],
+      fdesc:"Avianca Quito–Toronto $787 + Korean Air Toronto–Incheon directo $1.076, en dos boletos (consulta del 10 nov 2026, 1 adulto) · visa de Canadá ~$135 · K-ETA ~$8",
+      note:"<b>Septiembre:</b> ~26 °C y todavía puede haber tifones. <b>Chuseok cae del martes 14 al jueves 16</b>: cierran muchas tiendas y clínicas, el KTX se agota y Busan sube de precio ese fin de semana. Por eso, en septiembre el chequeo médico pasa al lunes 20, en Gangnam. El vuelo es el más barato de los tres meses (consulta del 10 nov 2026)."},
+    oct:{name:"Octubre", start:[2027,9,8], flight:{v:1997, lo:1863, hi:2130, src:"p"},
+      out:["Vie 18:50","Sáb · confirmar"],
+      fdesc:"Proyección: promedio de agosto y septiembre. El regreso del 19 de octubre todavía no está a la venta (consulta del 10 nov 2026) · visa de Canadá ~$135 · K-ETA ~$8",
+      note:"<b>Octubre:</b> el mejor clima (~20 °C, seco) y el comienzo del follaje de otoño. El sábado 9 es el Día del Hangul y el lunes 11, feriado sustituto. El chequeo queda el martes 12. El vuelo es una proyección: el regreso del 19 de octubre todavía no está a la venta."}
+  };
+  var VISAS = 143;
+  var MED = {
+    none:{t:"No", krw:0},
+    basico:{t:"Básico", krw:500000, d:"Sangre y orina, ecografía abdominal, rayos X de tórax, electrocardiograma, presión y visión. ~3 h"},
+    estandar:{t:"Estándar", krw:1200000, d:"Lo del básico + endoscopía con sedación, ecografía de tiroides, marcadores tumorales y densitometría. ~4 h"},
+    premium:{t:"Premium", krw:2500000, d:"Lo del estándar + tomografía de tórax de baja dosis, colonoscopía y consulta de resultados con el médico. Medio día"}
+  };
+  var STAYKEYS = {s1:"Seúl · estadía 1", gy:"Gyeongju", bs:"Busan", s2:"Seúl · estadía 2"};
+  var STAYCOL = {s1:"--seoul", gy:"--gyeongju", bs:"--busan", s2:"--seoul"};
+  var STAYNIGHTS = {s1:[1,4], gy:[4,5], bs:[5,8], s2:[8,10]};
+  var STAYHANGUL = {s1:"서울", gy:"경주", bs:"부산", s2:"서울"};
+  var LV = ["Económico","Medio","Alto"], LVK = ["E","M","A"];
+  var PHOTOS = {
+    incheon:"Aeropuerto de Incheon", gyeongbok:"Gyeongbokgung", bukchon:"Bukchon Hanok", hanbok:"Hanbok en el palacio",
+    gwangjang:"Mercado Gwangjang", namsan:"N Seoul Tower", myeongdong:"Myeongdong de noche", checkup:"Hospital Severance, Seúl",
+    bulguksa:"Bulguksa", seokguram:"Seokguram", daereungwon:"Túmulos de Daereungwon", donggung:"Donggung y estanque Wolji",
+    gamcheon:"Aldea Gamcheon", jagalchi:"Mercado Jagalchi", haedong:"Haedong Yonggungsa", haeundae:"Playa Haeundae",
+    gwangan:"Puente Gwangan de noche", spaland:"Shinsegae Centum City", garosugil:"Garosu-gil", coex:"Biblioteca Starfield, COEX",
+    cheonggye:"Cheonggyecheon", ktx:"Tren KTX", oliveyoung:"Olive Young", jjimjilbang:"Jjimjilbang coreano"
+  };
+  var DAYS = [
+    {n:"0", title:"De Quito a Seúl", base:"En tránsito", c:"--air", stamp:"plane", kanji:"출발", photos:[], stay:null, items:[
+      {h:"Vie 18:50", t:"Quito → Bogotá → Toronto", d:"Avianca, llega a Toronto el sábado a las 07:20. En Toronto hay que retirar valijas y volver a despacharlas: son dos boletos", k:"vuelo"},
+      {h:"Sáb 12:30", t:"Toronto → Seúl Incheon", d:"Korean Air directo, ~15 h. Llega el domingo a las 16:30", k:"vuelo"},
+      {h:"Total", t:"Vuelo ida y vuelta, visa y K-ETA", d:"", flight:1, k:"vuelo"}
+    ]},
+    {n:"1", title:"Llegada y primera noche en Myeongdong", base:"Base: Seúl (Myeongdong)", c:"--seoul", stamp:"plane", kanji:"인천", photos:["incheon"], stay:"s1", items:[
+      {h:"16:30", t:"Aterrizaje en Incheon", d:"Migración con K-ETA y e-Arrival Card. Comprar T-money o WOWPASS y activar la eSIM"},
+      {h:"17:45", t:"Incheon → Myeongdong con valijas", d:"AREX a la Estación de Seúl + metro línea 4, ~1 h 10 min. En taxi: dos autos o un jumbo taxi", krw:6000, taxi:28000, k:"transporte", leg:"Incheon → Myeongdong"},
+      {h:"19:15", t:"Check-in en el Airbnb", d:""},
+      {h:"20:00", t:"Comida callejera en Myeongdong", d:"Tteokbokki, hotteok, brochetas. Los puestos abren hasta las 22:00", krw:15000, k:"comida"}
+    ]},
+    {n:"2", title:"Palacios en hanbok y mercado Gwangjang", base:"Base: Seúl (Myeongdong)", c:"--seoul", stamp:"palace", kanji:"서울", photos:["gyeongbok","hanbok","gwangjang"], stay:"s1", items:[
+      {h:"08:00", t:"Desayuno de convenience", d:"Gimbap triangular y café", krw:6000, k:"comida"},
+      {h:"09:00", t:"Alquiler de hanbok cerca del palacio", d:"2 a 4 h, con peinado básico", krw:20000, k:"entradas", pre:1},
+      {h:"09:30", t:"Gyeongbokgung", d:"Entrada gratis vistiendo hanbok (₩3.000 sin hanbok). Cambio de guardia a las 10:00. Cierra los martes"},
+      {h:"12:00", t:"Bukchon Hanok", d:"Barrio residencial: visitas hasta las 17:00 y en silencio"},
+      {h:"13:00", t:"Almuerzo en Insadong", d:"Sujebi o bibimbap en una casa tradicional", krw:15000, k:"comida"},
+      {h:"15:30", t:"Paseo por Cheonggyecheon", d:"Arroyo urbano de 11 km; se camina el tramo hasta Gwangjang"},
+      {h:"17:30", t:"Mercado Gwangjang", d:"Bindaetteok, mayak gimbap y yukhoe en los puestos", krw:20000, k:"comida"},
+      {h:"Día", t:"Metro y buses", d:"Con T-money", krw:5000, k:"movilidad"}
+    ]},
+    {n:"3", title:"Chequeo médico, K-beauty y Namsan", base:"Base: Seúl (Myeongdong)", c:"--seoul", stamp:"health", kanji:"검진", photos:["checkup","namsan","myeongdong"], stay:"s1",
+      note:"<b>Chequeo en ayunas:</b> sin comer desde las 21:00 de la noche anterior. Quien no lo hace arranca con Changdeokgung y su jardín secreto.",
+      noteMonths:["ago","oct"], items:[
+      {h:"07:30", t:"Chequeo médico completo", d:"", med:1, k:"salud", months:["ago","oct"]},
+      {h:"08:30", t:"Changdeokgung y jardín secreto", d:"Para quien no hace el chequeo. Recorrido guiado del jardín con cupo", krw:8000, k:"entradas", months:["ago","oct"]},
+      {h:"09:00", t:"Chuseok en Seúl", d:"Feriado nacional: muchas tiendas cierran. Mañana libre o Changdeokgung, que suele abrir en Chuseok", krw:8000, k:"entradas", months:["sep"]},
+      {h:"12:30", t:"Almuerzo: samgyetang", d:"Sopa de pollo con ginseng; liviana para quien viene del chequeo", krw:18000, k:"comida"},
+      {h:"14:30", t:"Myeongdong K-beauty", d:"Olive Young principal y tiendas de marcas: probar productos con asesoría y diagnóstico de piel gratis"},
+      {h:"15:30", t:"Compras de cosmética", d:"Devolución de impuesto inmediata en tienda desde ₩15.000, con pasaporte físico", krw:150000, k:"belleza", o:1},
+      {h:"17:30", t:"Teleférico de Namsan y N Seoul Tower", d:"Teleférico ida y vuelta + observatorio, al atardecer", krw:41000, k:"entradas"},
+      {h:"20:00", t:"Barbacoa coreana", d:"Samgyeopsal con banchan ilimitado", krw:25000, k:"comida"},
+      {h:"Día", t:"Metro", d:"Con T-money", krw:4000, k:"movilidad"}
+    ]},
+    {n:"4", title:"KTX a Gyeongju, la ciudad-museo", base:"Base: Gyeongju", c:"--gyeongju", stamp:"train", kanji:"경주", photos:["daereungwon","donggung"], stay:"gy",
+      note:"<b>Miércoles 15 de septiembre es Chuseok:</b> el KTX se llena. Comprar en Korail apenas se abra la venta, un mes antes.", noteMonths:["sep"], items:[
+      {h:"08:00", t:"Myeongdong → Estación de Seúl con valijas", d:"Metro línea 4, dos paradas", krw:1500, taxi:3000, k:"transporte", leg:"Myeongdong → Estación de Seúl"},
+      {h:"09:00", t:"KTX Seúl → Singyeongju", d:"~2 h 10 min. Asientos reservados", krw:49300, k:"transporte", shk:1},
+      {h:"11:20", t:"Singyeongju → centro de Gyeongju con valijas", d:"Bus 700, ~25 min", krw:1500, taxi:7000, k:"transporte", leg:"Singyeongju → centro"},
+      {h:"12:30", t:"Almuerzo: ssambap", d:"Arroz con verduras para envolver, la especialidad local", krw:15000, k:"comida"},
+      {h:"14:00", t:"Daereungwon y Cheomseongdae", d:"Túmulos reales de Silla y el observatorio más antiguo de Asia. Entrada gratis"},
+      {h:"16:00", t:"Hwangridan-gil", d:"Hanoks convertidos en cafés. Probar el pan de Gyeongju", krw:6000, k:"comida"},
+      {h:"19:00", t:"Donggung y estanque Wolji iluminados", d:"El palacio se refleja en el agua al anochecer", krw:3000, k:"entradas"},
+      {h:"20:30", t:"Cena: tteokgalbi", d:"Costilla picada a la parrilla", krw:20000, k:"comida"},
+      {h:"Día", t:"Bus o bicicleta", d:"Bicicletas de alquiler en el centro", krw:5000, k:"movilidad"}
+    ]},
+    {n:"5", title:"Bulguksa, Seokguram y rumbo a Busan", base:"Base: Busan (Haeundae)", c:"--busan", stamp:"palace", kanji:"불국사", photos:["bulguksa","seokguram","haeundae"], stay:"bs", items:[
+      {h:"07:30", t:"Check-out y valijas", d:"Dejarlas en el alojamiento o en lockers de la terminal"},
+      {h:"08:00", t:"Bus 10 u 11 a Bulguksa", d:"~40 min", krw:1500, k:"movilidad"},
+      {h:"08:45", t:"Templo Bulguksa", d:"Patrimonio de la Unesco. Entrada gratis desde 2023"},
+      {h:"10:30", t:"Gruta de Seokguram", d:"Bus 12 por la montaña; Buda de piedra del siglo VIII. Entrada gratis", krw:1500, k:"movilidad"},
+      {h:"12:30", t:"Almuerzo cerca de Bulguksa", d:"Bibimbap de verduras de montaña", krw:12000, k:"comida"},
+      {h:"14:30", t:"Gyeongju → Busan (Haeundae) con valijas", d:"Bus interurbano ~1 h 10 min hasta Haeundae", krw:9000, taxi:34000, k:"transporte", leg:"Gyeongju → Busan"},
+      {h:"17:00", t:"Check-in en Haeundae", d:""},
+      {h:"18:30", t:"Playa Haeundae al atardecer", d:"Paseo marítimo"},
+      {h:"19:30", t:"Cena: dwaeji gukbap", d:"Sopa de cerdo, el plato de Busan, en el mercado de Haeundae", krw:12000, k:"comida"}
+    ]},
+    {n:"6", title:"El Busan de colores: Gamcheon y Jagalchi", base:"Base: Busan (Haeundae)", c:"--busan", stamp:"wave", kanji:"부산", photos:["gamcheon","jagalchi","gwangan"], stay:"bs", items:[
+      {h:"08:30", t:"Desayuno en un café", d:"", krw:8000, k:"comida"},
+      {h:"09:30", t:"Metro + bus a Gamcheon", d:"~1 h desde Haeundae"},
+      {h:"10:30", t:"Aldea Gamcheon", d:"Casas de colores en la ladera. Mapa de sellos opcional", krw:2000, k:"entradas"},
+      {h:"13:00", t:"Mercado Jagalchi", d:"Elegir pescado abajo y comer hoe (sashimi coreano) arriba", krw:35000, k:"comida"},
+      {h:"15:00", t:"BIFF y mercado Gukje", d:"Ssiat hotteok, el hotteok relleno de semillas", krw:3000, k:"comida"},
+      {h:"19:30", t:"Gwangalli: pollo frito y cerveza", d:"Chimaek frente al puente Gwangan iluminado", krw:20000, k:"comida"},
+      {h:"Día", t:"Metro y buses", d:"", krw:6000, k:"movilidad"}
+    ]},
+    {n:"7", title:"Templo junto al mar, jjimjilbang y drones", base:"Base: Busan (Haeundae)", c:"--busan", stamp:"wave", kanji:"해운대", photos:["haedong","jjimjilbang"], stay:"bs",
+      note:"<b>Sábado:</b> el show de drones de Gwangalli suele ser a las 20:00 y 22:00. Confirmar en el calendario oficial; se cancela con viento o lluvia.", items:[
+      {h:"08:00", t:"Haedong Yonggungsa temprano", d:"Templo budista sobre las rocas del mar, antes de las excursiones. Entrada gratis"},
+      {h:"10:30", t:"Blueline Park: tren costero", d:"De Mipo a Cheongsapo por la costa", krw:7000, k:"entradas"},
+      {h:"11:00", t:"Sky Capsule", d:"Cabina para 4 sobre las vías, con vista al mar", krw:15000, k:"entradas", o:1},
+      {h:"12:30", t:"Almuerzo: milmyeon", d:"Fideos fríos de trigo, típicos de Busan", krw:10000, k:"comida"},
+      {h:"14:00", t:"Spa Land Centum City", d:"Jjimjilbang de agua termal: baños, salas de sal, barro y piedra. Ropa y toalla incluidas, máx. 4 h", krw:25000, k:"belleza"},
+      {h:"18:30", t:"Cena en el patio de comidas de Shinsegae", d:"", krw:15000, k:"comida"},
+      {h:"20:00", t:"Show de drones en Gwangalli", d:"Gratis, desde la playa"},
+      {h:"Día", t:"Metro y buses", d:"", krw:6000, k:"movilidad"}
+    ]},
+    {n:"8", title:"KTX a Seúl y tarde de facial en Gangnam", base:"Base: Seúl (Gangnam)", c:"--seoul", stamp:"drop", kanji:"강남", photos:["ktx","garosugil"], stay:"s2", items:[
+      {h:"08:30", t:"Haeundae → Estación de Busan con valijas", d:"Metro línea 2 y 1, ~1 h", krw:1700, taxi:10000, k:"transporte", leg:"Haeundae → Estación de Busan"},
+      {h:"10:00", t:"KTX Busan → Seúl", d:"~2 h 40 min", krw:59800, k:"transporte", shk:1},
+      {h:"12:45", t:"Estación de Seúl → Gangnam con valijas", d:"Metro, ~35 min", krw:1600, taxi:6000, k:"transporte", leg:"Estación de Seúl → Gangnam"},
+      {h:"13:30", t:"Almuerzo", d:"Kalguksu o naengmyeon", krw:12000, k:"comida"},
+      {h:"15:00", t:"Facial coreano en un spa de Cheongdam", d:"60–90 min: limpieza profunda, mascarilla e hidratación. Reservar con 2–3 semanas", krw:120000, k:"belleza", pre:1},
+      {h:"17:30", t:"Garosu-gil", d:"Tiendas de marcas coreanas de cosmética, ropa y cafés"},
+      {h:"19:30", t:"Cena: sundubu jjigae", d:"Guiso de tofu suave", krw:13000, k:"comida"}
+    ]},
+    {n:"9", title:"Clínica dermatológica y despedida", base:"Base: Seúl (Gangnam)", c:"--seoul", stamp:"drop", kanji:"피부", photos:["coex"], stay:"s2",
+      note:"<b>Por qué la piel queda para el final:</b> después del láser conviene evitar sol y playa unos días. En Busan ya no hay riesgo.", items:[
+      {h:"07:30", t:"Chequeo médico completo", d:"", med:1, k:"salud", months:["sep"]},
+      {h:"09:30", t:"Seongsu", d:"Cafés en fábricas recicladas y pop-ups de marcas coreanas", months:["ago","oct"]},
+      {h:"12:30", t:"Almuerzo", d:"", krw:15000, k:"comida"},
+      {h:"14:00", t:"Clínica dermatológica en Sinsa o Apgujeong", d:"Consulta con dermatólogo + un tratamiento (láser toning o limpieza Aqua Peel), con intérprete. Desde 2026 los tratamientos ya no tienen devolución de IVA", krw:150000, k:"belleza", pre:1},
+      {h:"15:30", t:"Rejuran o skin booster", d:"Tratamiento extra si lo recomienda el dermatólogo", krw:300000, k:"belleza", o:1},
+      {h:"17:00", t:"COEX y Biblioteca Starfield", d:"Entrada libre. Olive Young de Gangnam para las últimas compras"},
+      {h:"19:30", t:"Cena de despedida: hanwoo", d:"Res coreana a la parrilla", krw:50000, k:"comida"},
+      {h:"Día", t:"Metro", d:"", krw:5000, k:"movilidad"}
+    ]},
+    {n:"10", title:"Regreso", base:"En tránsito", c:"--air", stamp:"plane2", kanji:"출국", photos:[], stay:null, items:[
+      {h:"06:30", t:"Gangnam → Incheon con valijas", d:"Bus limusina del aeropuerto, ~1 h 20 min", krw:17000, taxi:30000, k:"transporte", leg:"Gangnam → Incheon"},
+      {h:"08:00", t:"Devolución de impuestos en el aeropuerto", d:"Solo para compras que no tuvieron devolución inmediata en la tienda"},
+      {h:"Mar · confirmar", t:"Seúl Incheon → Toronto", d:"Korean Air directo. Por el cambio de hora llega a Toronto el mismo martes", k:"vuelo"},
+      {h:"Mar · confirmar", t:"Toronto → Bogotá → Quito", d:"Avianca; llega a Quito el miércoles. Retirar y volver a despachar valijas en Toronto", k:"vuelo"}
+    ]}
+  ];
+  var STAYTAX = {s1:0, gy:0, bs:0, s2:0};
+  var EXTRAS = [
+    {t:"Seguro de viaje (12 días)", usd:60},
+    {t:"Valija despachada en Avianca, ida y vuelta (si la tarifa no la incluye)", usd:100},
+    {t:"eSIM coreana", usd:20},
+    {t:"Comisión de tarjeta y cambio (~2,5% del gasto en Corea)", pct:0.025}
+  ];
+  var ROUTES = {
+    ruta:[{d:"Ruta", seq:["incheon","seul","gyeongju","busan","seul","incheon"]}],
+    seul:[{d:"1", seq:["seoulst","bnb:s1"]},{d:"2", seq:["bnb:s1","gyeongbok","bukchon","insadong","cheonggye","gwangjang","bnb:s1"]},{d:"3", seq:["bnb:s1","checkup","myeongdong","namsan","bnb:s1"]},{d:"4", seq:["bnb:s1","seoulst"]},{d:"8", seq:["seoulst","bnb:s2","spa","garosu","bnb:s2"]},{d:"9", seq:["bnb:s2","seongsu","clinic","coex","bnb:s2"]}],
+    gyeongju:[{d:"4", seq:["singyeongju","bnb:gy","daereungwon","cheomseong","hwangridan","donggung","bnb:gy"]},{d:"5", seq:["bnb:gy","bulguksa","seokguram","terminal"]}],
+    busan:[{d:"5", seq:["bnb:bs","haeundae","bnb:bs"]},{d:"6", seq:["bnb:bs","gamcheon","jagalchi","gwangalli","bnb:bs"]},{d:"7", seq:["bnb:bs","haedong","blueline","spaland","gwangalli","bnb:bs"]},{d:"8", seq:["bnb:bs","busanst"]}]
+  };
+  var CAT = {vuelo:"Vuelo, visa de Canadá y K-ETA", transporte:"KTX y traslados", movilidad:"Metro y buses", entradas:"Entradas y actividades", comida:"Comidas", hotel:"Hospedaje", belleza:"Skin care y spa", salud:"Chequeo médico", extras:"Seguro, valija, eSIM y comisiones"};
+  var FOODNAMES = {samgyeopsal:"Samgyeopsal", bibimbap:"Bibimbap", tteokbokki:"Tteokbokki", gimbap:"Gimbap", hotteok:"Hotteok", bindaetteok:"Bindaetteok", gyeongjubread:"Pan de Gyeongju", gukbap:"Dwaeji gukbap", milmyeon:"Milmyeon", eomuk:"Eomuk", chimaek:"Chimaek", bingsu:"Bingsu", hoe:"Hoe", sundubu:"Sundubu jjigae"};
+  var WD = ["dom","lun","mar","mié","jue","vie","sáb"], MO = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+
+  function fmt(n){ return "$" + String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, "."); }
+  function yfmt(n){ return "₩" + String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, "."); }
+  function dt(off){ var s = MONTHS[mon].start; return new Date(Date.UTC(s[0], s[1], s[2] + off)); }
+  function dl(d, wd){ return (wd ? WD[d.getUTCDay()] + " " : "") + d.getUTCDate() + " " + MO[d.getUTCMonth()]; }
+  function iso(d){ return d.toISOString().slice(0,10); }
+  function flightTotal(){ return MONTHS[mon].flight.v + VISAS; }
+  function nightPP(stay){ return DATA.picks[stay].list[lvl].m[mon].pp_night; }
+  function active(it){ return !it.months || it.months.indexOf(mon) > -1; }
+
+  var S = 'fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"';
+  var PLANE = '<path d="M28 62 L92 52 Q99 52 98 57 Q97 61 90 62 L28 66 Z" fill="currentColor"/><path d="M58 58 L46 36 L54 36 L74 56 Z M62 62 L52 82 L60 82 L76 61 Z M32 62 L26 50 L32 50 L40 61 Z" fill="currentColor"/>';
+  var ICONS = {
+    plane: PLANE,
+    palace:'<path d="M14 50 Q60 26 106 50 M24 47 Q22 41 18 40 M96 47 Q98 41 102 40 M28 58 H92 M34 58 V88 M86 58 V88 M50 66 H70 V88 H50 Z M24 88 H96" '+S+'/>',
+    health:'<path d="M50 26 H70 V46 H90 V66 H70 V86 H50 V66 H30 V46 H50 Z" '+S+'/>',
+    drop:'<path d="M60 22 C60 22 34 54 34 70 A26 26 0 0 0 86 70 C86 54 60 22 60 22 Z M47 72 Q49 83 60 85" '+S+'/>',
+    wave:'<path d="M14 70 Q26 58 38 70 T62 70 T86 70 T110 70 M14 86 Q26 74 38 86 T62 86 T86 86 T110 86" '+S+'/><circle cx="82" cy="40" r="11" '+S+'/>',
+    
+    train:'<rect x="30" y="30" width="60" height="52" rx="14" '+S+'/><path d="M30 56 H90 M44 70 h0 M76 70 h0 M42 82 L32 94 M78 82 L88 94 M46 40 H74" '+S+'/>',
+    plane2:'<g transform="rotate(-18 60 60)">'+PLANE+'</g><path d="M22 86 H98" '+S+'/>',
+    tower:'<path d="M60 22 L76 84 M60 22 L44 84 M49 64 H71 M53 48 H67 M47 72 L73 84 M73 72 L47 84" '+S+'/><rect x="51" y="40" width="18" height="7" fill="currentColor"/>',
+    fireworks:(function(){var s='';for(var i=0;i<12;i++){var a=i*Math.PI/6;s+='<line x1="'+(46+Math.cos(a)*6).toFixed(1)+'" y1="'+(44+Math.sin(a)*6).toFixed(1)+'" x2="'+(46+Math.cos(a)*20).toFixed(1)+'" y2="'+(44+Math.sin(a)*20).toFixed(1)+'" '+S+'/>';}for(var j=0;j<8;j++){var b=j*Math.PI/4;s+='<line x1="'+(80+Math.cos(b)*4).toFixed(1)+'" y1="'+(64+Math.sin(b)*4).toFixed(1)+'" x2="'+(80+Math.cos(b)*14).toFixed(1)+'" y2="'+(64+Math.sin(b)*14).toFixed(1)+'" '+S+'/>';}return s+'<path d="M30 86 H90" '+S+'/>';})(),
+    shinkansen:'<path d="M60 26 L92 68 H28 Z" '+S+'/><path d="M60 26 L68 37 L63 35 L60 39 L56 35 L52 37 Z" fill="currentColor"/><path d="M18 86 H82 Q100 86 102 79 L84 74 H18 Z" fill="currentColor"/>',
+    torii:'<path d="M26 34 Q60 26 94 34" '+S+' stroke-width="5"/><path d="M32 46 H88 M40 34 V86 M80 34 V86" '+S+' stroke-width="5"/><path d="M60 34 V46" '+S+'/>',
+    deer:'<ellipse cx="60" cy="64" rx="12" ry="17" '+S+'/><path d="M47 52 L36 46 M73 52 L84 46 M54 48 L48 30 M51 39 L41 34 M66 48 L72 30 M69 39 L79 34" '+S+'/><circle cx="55" cy="62" r="2" fill="currentColor"/><circle cx="65" cy="62" r="2" fill="currentColor"/>',
+    coaster:'<circle cx="60" cy="50" r="18" '+S+'/><path d="M18 82 Q42 82 50 64 M70 64 Q78 82 102 82 M40 82 V70 M80 82 V70 M60 68 V82" '+S+'/>',
+    clapper:'<rect x="32" y="50" width="56" height="34" rx="3" '+S+'/><path d="M32 50 L36 36 L88 30 L88 44 Z" '+S+'/><path d="M46 34 L42 48 M60 33 L56 48 M74 31 L70 48" '+S+'/>',
+    crossing:'<path d="M30 30 V60 M44 22 V60 M58 34 V60 M72 26 V60 M86 38 V60" '+S+'/><path d="M24 70 H44 M50 70 H70 M76 70 H96 M24 80 H44 M50 80 H70 M76 80 H96" '+S+' stroke-width="5"/>'
+  };
+  function stamp(d){
+    var fs = d.kanji.length > 2 ? 13 : 16;
+    return '<svg class="stamp" viewBox="0 0 120 120" role="img" aria-label="Sello del día '+d.n+'"><rect x="4" y="4" width="112" height="112" rx="16" fill="none" stroke="currentColor" stroke-width="3"/><rect x="10" y="10" width="100" height="100" rx="11" fill="none" stroke="currentColor" stroke-width="1.2"/><g transform="translate(0,-6)">'+ICONS[d.stamp]+'</g><text x="60" y="'+(fs===13?101:103)+'" text-anchor="middle" font-family="Black Han Sans, sans-serif" font-size="'+fs+'" fill="currentColor">'+d.kanji+'</text></svg>';
+  }
+  function gallery(keys){
+    if (!keys.length) return "";
+    var cls = keys.length === 1 ? "gallery one" : keys.length === 2 ? "gallery two" : "gallery";
+    return '<div class="'+cls+'">' + keys.map(function(k,i){
+      return '<figure class="'+(i===0?'big':'small')+'"><img src="img/'+k+'.jpg" alt="'+PHOTOS[k]+'" loading="'+(i===0?'eager':'lazy')+'"><figcaption>'+PHOTOS[k]+'</figcaption></figure>';
+    }).join("") + '</div>';
+  }
+  function flightLabel(m){ return m === "oct" ? "proyección sin cotizar" : "consultado 10 nov · 1 adulto"; }
+  function chip(it){
+    if (it.med) return med === "none" ? '<span class="chip o">no incluido</span>' : '<span class="chip s">por persona · estimado</span>';
+    if (it.o) return '<span class="chip o">opcional</span>';
+    if (it.flight) return '<span class="chip e">' + flightLabel(mon) + '</span>';
+    if (!it.krw) return '';
+    return it.v ? '<span class="chip v">validado</span>' : '<span class="chip e">estimado</span>';
+  }
+
+  var mon = "sep", lvl = 1, withOpt = false, mode = "tren", med = "basico", saved = 0, mapDay = {};
+  try { var st = JSON.parse(localStorage.getItem("kr27c") || "null"); if (st) { mon = st.mon || mon; lvl = st.lvl; withOpt = st.opt; mode = st.mode || mode; med = MED[st.med] ? st.med : med; } } catch(e){}
+  document.getElementById("mode-" + mode).checked = true;
+  document.getElementById("med-" + med).checked = true;
+  document.getElementById("mon-"+mon).checked = true;
+  document.getElementById("lvl-"+lvl).checked = true;
+  document.getElementById("opt").checked = withOpt;
+
+  function amountOf(it){ if (it.flight) return flightTotal(); if (it.med) return MED[med].krw / RATE; if (mode === "taxi" && it.taxi != null) return it.taxi / RATE; return (it.krw || 0) / RATE; }
+  function nightCost(stay){ return nightPP(stay) + STAYTAX[stay] / RATE; }
+  function costs(m){
+    var save = mon; mon = m;
+    var cats = {vuelo:flightTotal(),transporte:0,movilidad:0,entradas:0,comida:0,hotel:0,belleza:0,salud:0,extras:0}, opt = 0, pre = 0, shk = 0;
+    DAYS.forEach(function(d){
+      d.items.forEach(function(it){
+        if (it.flight || !active(it)) return;
+        var a = amountOf(it);
+        if (!a) return;
+        if (it.o) { opt += a; if (!withOpt) return; }
+        cats[it.k] += a;
+        if (it.pre) pre += a;
+        if (it.shk) shk += a;
+      });
+      if (d.stay) cats.hotel += nightCost(d.stay);
+    });
+    var japanBase = cats.transporte + cats.movilidad + cats.entradas + cats.comida + cats.hotel + cats.belleza + cats.salud;
+    var fixedExtras = 0, pctExtra = 0;
+    EXTRAS.forEach(function(e){ if (e.usd) fixedExtras += e.usd; else pctExtra += e.pct * (japanBase - cats.hotel); });
+    cats.extras = fixedExtras + pctExtra;
+    mon = save;
+    var japan = japanBase;
+    var total = japan + cats.vuelo + cats.extras;
+    return {cats:cats, opt:opt, japan:japan, total:total, pre:pre, shk:shk, pctExtra:pctExtra,
+      cash: japanBase - cats.hotel - pre - shk - cats.salud};
+  }
+
+  function renderMaps(){
+    var M = DATA.maps, html = "";
+    var defs = [
+      {key:"ruta", title:"La ruta completa", wide:true, col:"--air"},
+      {key:"seul", title:"Seúl", col:"--seoul", stays:["s1","s2"]},
+      {key:"gyeongju", title:"Gyeongju", col:"--gyeongju", stays:["gy"]},
+      {key:"busan", title:"Busan", col:"--busan", stays:["bs"]}
+    ];
+    defs.forEach(function(df){
+      var m = M[df.key], pins = "", leg = "", n = 0, bnbLeg = "";
+      var byId = {};
+      m.pts.forEach(function(p){ if (p.id === "bnb") byId["bnb:" + p.k.slice(2) + ":" + p.k.charAt(1)] = p; else byId[p.id] = p; });
+      function pt(id){ return id.indexOf("bnb:") === 0 ? byId[id + ":" + lvl] : byId[id]; }
+      var routes = ROUTES[df.key], sel = mapDay[df.key] || "all";
+      var shown = routes.filter(function(r){ return sel === "all" || r.d === sel; });
+      var onRoute = {};
+      shown.forEach(function(r){ r.seq.forEach(function(id){ var p = pt(id); if (p) onRoute[p.label] = 1; }); });
+      var dashes = ["", "8 5", "2 5", "12 4 2 4", "6 3", "1 4", "10 6"];
+      var lines = shown.map(function(r, i){
+        var ptsStr = r.seq.map(function(id){ var p = pt(id); return p ? (p.x / 100 * m.w).toFixed(1) + "," + (p.y / 100 * m.h).toFixed(1) : ""; }).filter(Boolean).join(" ");
+        var dash = sel === "all" && df.key !== "ruta" ? dashes[i % dashes.length] : "";
+        return '<polyline points="' + ptsStr + '" fill="none" style="stroke:var(' + df.col + ')" stroke-width="' + (sel === "all" ? 3 : 5) + '" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="' + dash + '" opacity="' + (sel === "all" ? 0.75 : 0.95) + '" marker-mid="url(#ar-' + df.key + ')" marker-end="url(#ar-' + df.key + ')"/>';
+      }).join("");
+      var svg = '<svg class="route" viewBox="0 0 ' + m.w + ' ' + m.h + '" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="ar-' + df.key + '" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M1 1 L9 5 L1 9 Z" style="fill:var(' + df.col + ')"/></marker></defs>' + lines + '</svg>';
+      m.pts.forEach(function(p){
+        var pos = 'left:' + p.x + '%;top:' + p.y + '%';
+        var dim = sel !== "all" && !onRoute[p.label] ? " dim" : "";
+        if (df.key === "ruta") {
+          var col = {air:"--air",seoul:"--seoul",gyeongju:"--gyeongju",busan:"--busan"}[p.k];
+          pins += '<span class="pin city" style="' + pos + ';--c:var(' + col + ')" aria-hidden="true"></span><span class="citylabel" style="' + pos + '">' + p.label + '</span>';
+        } else if (p.id === "bnb") {
+          var l = +p.k.charAt(1), stay = p.k.slice(2), tag = LVK[l] + (df.stays.length > 1 ? (stay === "s1" ? "1" : "2") : "");
+          if (l !== lvl) dim = " dim";
+          pins += '<button type="button" class="pin bnb' + dim + '" style="' + pos + '" data-label="' + p.label + '" aria-label="' + p.label + '">' + tag + '</button>';
+          if (l === lvl) bnbLeg += '<li><span class="k bnb">' + tag + '</span><span>' + DATA.picks[stay].list[l].title + ' · ' + STAYKEYS[stay] + '</span></li>';
+        } else {
+          n++;
+          pins += '<button type="button" class="pin' + dim + '" style="' + pos + ';--c:var(' + df.col + ')" data-label="' + p.label + '" aria-label="' + p.label + '">' + n + '</button>';
+          leg += '<li style="--c:var(' + df.col + ')"><span class="k">' + n + '</span><span>' + p.label + '</span></li>';
+        }
+      });
+      var chips = "";
+      if (df.key !== "ruta") {
+        chips = '<div class="daychips" role="group" aria-label="Elegir día en el mapa de ' + df.title + '">' +
+          '<button type="button" data-map="' + df.key + '" data-day="all" aria-pressed="' + (sel === "all") + '">Todos</button>' +
+          routes.map(function(r){ return '<button type="button" data-map="' + df.key + '" data-day="' + r.d + '" aria-pressed="' + (sel === r.d) + '">Día ' + r.d + '</button>'; }).join("") + '</div>';
+        if (sel !== "all") {
+          var r = routes.filter(function(x){ return x.d === sel; })[0];
+          chips += '<p class="routetxt">' + r.seq.map(function(id){ var p = pt(id); return p ? (p.id === "bnb" ? "Airbnb" : p.label) : ""; }).join(" → ") + '</p>';
+        }
+      }
+      html += '<figure class="map' + (df.wide ? ' wide' : '') + '"><div class="map-frame"><img src="img/maps/' + df.key + '.jpg" width="' + m.w + '" height="' + m.h + '" alt="Mapa de ' + df.title + '">' + svg + pins + '</div>'
+        + (df.wide ? '' : '<div class="map-legend"><h3>' + df.title + '</h3>' + chips + '<ol>' + leg + '<li class="sub">Airbnb nivel ' + LV[lvl].toLowerCase() + '</li>' + bnbLeg + '</ol></div>')
+        + '<figcaption class="attrib">© colaboradores de OpenStreetMap</figcaption></figure>';
+    });
+    document.getElementById("maps").innerHTML = html;
+  }
+
+  function renderStays(){
+    var html = "";
+    ["s1","gy","bs","s2"].forEach(function(k){
+      var P = DATA.picks[k], a = STAYNIGHTS[k], ci = dt(a[0]+1), co = dt(a[1]+1);
+      var stt = DATA.stats[mon][k];
+      html += '<div class="stay-block" style="--c:var('+STAYCOL[k]+')"><div class="stay-head"><h3><span>'+STAYHANGUL[k]+'</span>'+STAYKEYS[k]+' · '+P.area+'</h3>'
+        + '<span class="mkt">'+P.nights+(P.nights===1?' noche, ':' noches, ')+dl(ci,true)+' al '+dl(co,true)+' · en la zona: desde '+fmt(stt.min)+', mediana '+fmt(stt.med)+' ('+stt.n+' opciones)</span></div><div class="bnbs">';
+      P.list.forEach(function(b, i){
+        var mm = b.m[mon], url = "https://www.airbnb.com/rooms/"+b.id+"?adults=6&check_in="+iso(ci)+"&check_out="+iso(co);
+        html += '<article class="bnb-card'+(i===lvl?' sel':'')+'"><img src="'+b.img+'" alt="'+b.title+'" loading="lazy"><span class="bnb-lvl">'+LV[i]+'</span><div class="bnb-body">'
+          + '<div class="bnb-title">'+b.title+'</div><div class="bnb-sub">'+b.sub+'</div>'
+          + '<div class="bnb-meta"><span>'+b.beds+'</span><span>★ '+b.rating+'</span></div>'
+          + '<div class="bnb-price"><b>'+fmt(mm.total)+'</b><small>total '+P.nights+(P.nights===1?' noche · ':' noches · ')+fmt(mm.pp_night)+' por persona y noche</small>'+(mm.src==="real"?'<span class="chip v">validado</span>':'<span class="chip e">proyección</span>')+'</div>'
+          + '<a class="bnb-link" href="'+url+'" target="_blank" rel="noopener">Ver anuncio en Airbnb ↗</a></div></article>';
+      });
+      html += '</div></div>';
+    });
+    document.getElementById("stays").innerHTML = html;
+  }
+
+  function renderDays(){
+    var html = "";
+    DAYS.forEach(function(d, idx){
+      var total = 0, rows = "";
+      d.items.forEach(function(original){
+        var it = Object.assign({}, original);
+        if (idx === 0 && !it.flight && it.t.indexOf("Quito") === 0) it.h = MONTHS[mon].out[0];
+        if (idx === 0 && !it.flight && it.t.indexOf("Toronto") === 0) it.h = MONTHS[mon].out[1];
+        if (it.flight) it.d = MONTHS[mon].fdesc;
+        if (it.med) it.d = med === "none" ? "No elegiste chequeo. Elegí un paquete arriba para sumarlo a tu presupuesto." : "Paquete " + MED[med].t.toLowerCase() + ": " + MED[med].d + ". Centro internacional (KMI, Severance o Seoul St. Mary's), en ayunas.";
+        if (!active(it)) return;
+        var amount = amountOf(it), cell = "";
+        if (it.flight) { cell = fmt(amount); total += amount; }
+        else if (it.taxi != null) {
+          var other = mode === "taxi" ? (it.krw ? fmt(it.krw / RATE) : "incluido") : fmt(it.taxi / RATE);
+          cell = (amount ? fmt(amount) : "incluido") + '<span class="y">' + (mode === "taxi" ? "en tren: " : "taxi/Uber: ") + other + '</span>';
+          total += amount;
+        }
+        else if (it.med) { cell = med === "none" ? "—" : fmt(amount) + '<span class="y">' + yfmt(MED[med].krw) + '</span>'; total += amount; }
+        else if (it.krw) {
+          cell = fmt(amount) + '<span class="y">' + yfmt(it.krw) + '</span>';
+          if (!it.o || withOpt) total += amount;
+        }
+        var modeTag = it.taxi != null ? ' <span class="chip ' + (mode === "taxi" ? 'e">taxi o Uber' : 'v">tren') + '</span>' : '';
+        rows += '<tr class="' + (it.o ? 'opt' + (withOpt ? ' on' : '') : '') + '"><td class="h">' + it.h + '</td><td class="what"><b>' + it.t + '</b> ' + chip(it) + modeTag + (it.d ? '<small>' + it.d + '</small>' : '') + '</td><td class="cost">' + cell + '</td></tr>';
+      });
+      var stayHtml = '<span class="stay">Sin hospedaje esta noche</span>';
+      if (d.stay) {
+        var b = DATA.picks[d.stay].list[lvl], night = nightCost(d.stay);
+        total += night;
+        stayHtml = '<span class="stay">Noche: <b>' + b.title + '</b> · ' + fmt(night) + ' por persona' + (STAYTAX[d.stay] ? ' (incluye impuesto local ' + yfmt(STAYTAX[d.stay]) + ')' : '') + ' ' + (b.m[mon].src === "real" ? '<span class="chip v">validado</span>' : '<span class="chip e">proyección</span>') + '</span>';
+      }
+      var date = idx === 0 ? dl(dt(0), true) + " – " + dl(dt(2), true) : dl(dt(idx + 1), true);
+      var note = d.note && (!d.noteMonths || d.noteMonths.indexOf(mon) > -1) ? '<div class="note">' + d.note + '</div>' : '';
+      html += '<article class="day" style="--c:var(' + d.c + ')" id="dia-' + d.n + '">'
+        + '<div class="day-side">' + stamp(d) + '<div><div class="day-num">Día ' + d.n + '</div><div class="day-date">' + date + '</div></div></div>'
+        + '<div class="day-main">' + gallery(d.photos) + '<div class="day-head"><h3>' + d.title + '</h3><span class="base">' + d.base + '</span></div>'
+        + note + '<div class="tt-wrap"><table class="tt"><tbody>' + rows + '</tbody></table></div>'
+        + '<div class="day-foot">' + stayHtml + '<span class="day-total">' + fmt(total) + '<small>' + (idx === 0 ? 'vuelo, visa y K-ETA' : 'por persona este día') + '</small></span></div>'
+        + '</div></article>';
+    });
+    document.getElementById("days").innerHTML = html;
+  }
+
+  function renderMoves(){
+    var rows = "", tr = 0, tx = 0;
+    DAYS.forEach(function(d){ d.items.forEach(function(it){
+      if (it.taxi == null) return;
+      var a = (it.krw || 0) / RATE, b = it.taxi / RATE; tr += a; tx += b;
+      rows += '<tr><td>Día ' + d.n + '</td><td>' + it.leg + '</td><td class="' + (mode === "tren" ? 'cur' : '') + '">' + (a ? fmt(a) : 'incluido') + '</td><td class="' + (mode === "taxi" ? 'cur' : '') + '">' + fmt(b) + '</td></tr>';
+    }); });
+    rows += '<tr class="tot"><td></td><td>Total por persona</td><td class="' + (mode === "tren" ? 'cur' : '') + '">' + fmt(tr) + '</td><td class="' + (mode === "taxi" ? 'cur' : '') + '">' + fmt(tx) + '</td></tr>';
+    document.getElementById("moves").innerHTML = '<thead><tr><th>Día</th><th>Tramo con valijas</th><th class="' + (mode === "tren" ? 'cur' : '') + '">Tren, metro o bus</th><th class="' + (mode === "taxi" ? 'cur' : '') + '">Taxi (2 autos o jumbo)</th></tr></thead><tbody>' + rows + '</tbody>';
+    document.getElementById("moves-diff").textContent = fmt(tx - tr) + " por persona (" + fmt((tx - tr) * 6) + " el grupo)";
+  }
+
+  var MON_ES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+  function plan(m){
+    var c = costs(m), base = c.total, imprev = base * 0.10, grand = base + imprev;
+    var tIdx = {ago:7, sep:8, oct:9}[m];
+    var n = (2027 - 2026) * 12 + tIdx - 10;
+    var saveSt = mon; mon = m; var flight = MONTHS[m].flight.v; mon = saveSt;
+    var vis = EXTRAS[1].usd;
+    var ms = [
+      {i:0, t:"Visa canadiense", a:135},
+      {i:3, t:"Vuelos (Avianca + Korean Air) y valija", a:flight + vis},
+      {i:n-3, t:"K-ETA", a:8},
+      {i:n-2, t:"Reservas con fecha (facial, clínica dermatológica, hanbok)", a:c.pre},
+      {i:n-2, t:"Chequeo médico (paquete " + MED[med].t.toLowerCase() + ")", a:c.cats.salud},
+      {i:n-1, t:"Airbnb, KTX, seguro y eSIM", a:c.cats.hotel + c.shk + EXTRAS[0].usd + EXTRAS[2].usd},
+      {i:n-1, t:"Efectivo para Corea, comisiones e imprevistos (10%)", a:c.cash + c.pctExtra + imprev}
+    ].filter(function(x){ return x.a > 0; });
+    var p1 = 135 + flight + vis;
+    var need1 = Math.max(0, p1 - saved);
+    var ph1 = need1 / 4;
+    var remaining = Math.max(0, grand - saved - need1);
+    var ph2 = remaining / (n - 4);
+    return {c:c, grand:grand, n:n, tIdx:tIdx, ms:ms, ph1:ph1, ph2:ph2, flat:Math.max(0, grand - saved) / n};
+  }
+  function mlabel(i){ var mm = 10 + i, y = 2026 + Math.floor(mm / 12); return MON_ES[mm % 12] + " " + y; }
+  function renderSavings(){
+    var P = plan(mon), html = "";
+    var endLabel = mlabel(P.n - 1);
+    html += '<div class="tiles">'
+      + '<div class="tile"><span class="eyebrow">Noviembre 2026 a febrero 2027</span><b>' + fmt(P.ph1) + '</b><small>por persona al mes · grupo ' + fmt(P.ph1 * 6) + '</small><small>Alcanza para visas y vuelos en febrero</small></div>'
+      + '<div class="tile"><span class="eyebrow">Marzo 2027 a ' + endLabel + '</span><b>' + fmt(P.ph2) + '</b><small>por persona al mes · grupo ' + fmt(P.ph2 * 6) + '</small><small>' + (P.n - 4) + ' meses para el resto</small></div>'
+      + '<div class="tile"><span class="eyebrow">Total a juntar</span><b>' + fmt(P.grand) + '</b><small>por persona, con 10% de imprevistos · grupo ' + fmt(P.grand * 6) + '</small><small>Parejo en ' + P.n + ' meses: ' + fmt(P.flat) + ' al mes</small></div>'
+      + '</div>';
+    var acc = 0, rows = "";
+    P.ms.forEach(function(x){ acc += x.a; rows += '<tr><td>' + mlabel(x.i) + '</td><td>' + x.t + '</td><td>' + fmt(x.a) + '</td><td>' + fmt(acc) + '</td></tr>'; });
+    html += '<div class="box"><table class="sum compact"><thead><tr><th>Mes</th><th>Qué se paga</th><th>Por persona</th><th>Acumulado</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
+    var cmp = ["ago","sep","oct"].map(function(m){ var q = plan(m); return '<td class="' + (m === mon ? 'cur' : '') + '">' + fmt(q.ph1) + ' → ' + fmt(q.ph2) + '<small>' + q.n + ' meses · total ' + fmt(q.grand) + '</small></td>'; }).join("");
+    html += '<div class="box"><table class="sum"><thead><tr><th>Si viajan en</th><th class="' + (mon === "ago" ? 'cur' : '') + '">Agosto</th><th class="' + (mon === "sep" ? 'cur' : '') + '">Septiembre</th><th class="' + (mon === "oct" ? 'cur' : '') + '">Octubre</th></tr></thead><tbody><tr><td>Ahorro mensual por persona (hasta febrero → después)</td>' + cmp + '</tr></tbody></table></div>';
+    document.getElementById("savings").innerHTML = html;
+  }
+
+  function renderTotals(){
+    var c = costs(mon), M = MONTHS[mon];
+    document.getElementById("t-pp").textContent = fmt(c.total);
+    document.getElementById("t-grp").textContent = "Grupo de 6: " + fmt(c.total * 6);
+    document.getElementById("t-split").textContent = "Vuelo, visa y K-ETA " + fmt(c.cats.vuelo) + " · en Corea " + fmt(c.japan) + " · extras " + fmt(c.cats.extras);
+    document.getElementById("m-dep").textContent = dl(dt(0), true) + " " + M.start[0];
+    document.getElementById("m-jp").textContent = dl(dt(2), false) + " al " + dl(dt(11), false);
+    document.getElementById("m-ret").textContent = dl(dt(12), true);
+    document.getElementById("month-note").innerHTML = M.note;
+    var ln = [[2,5,"3 noches"],[5,6,"1 noche"],[6,9,"3 noches"],[9,11,"2 noches"]];
+    ln.forEach(function(x, i){ document.getElementById("ln-" + i).textContent = x[2] + " · " + (x[0] === x[1] ? dl(dt(x[0]), false) : dt(x[0]).getUTCDate() + "–" + dl(dt(x[1]), false)); });
+
+    var sum = '<thead><tr><th>Rubro</th><th>Por persona</th><th>Grupo de 6</th><th>% del total</th></tr></thead><tbody>';
+    ["vuelo","hotel","entradas","comida","transporte","movilidad","belleza","salud","extras"].forEach(function(k){
+      sum += '<tr><td>' + CAT[k] + '</td><td>' + fmt(c.cats[k]) + '</td><td>' + fmt(c.cats[k] * 6) + '</td><td>' + Math.round(c.cats[k] / c.total * 100) + '%</td></tr>';
+    });
+    sum += '<tr class="tot"><td>Total</td><td>' + fmt(c.total) + '</td><td>' + fmt(c.total * 6) + '</td><td>100%</td></tr>';
+    sum += '<tr><td>Opcionales ' + (withOpt ? '(incluidos)' : '(no incluidos)') + '</td><td>' + fmt(c.opt) + '</td><td>' + fmt(c.opt * 6) + '</td><td></td></tr>';
+    sum += '<tr><td>Fondo sugerido para imprevistos (10%)</td><td>' + fmt(c.total * 0.1) + '</td><td>' + fmt(c.total * 0.6) + '</td><td></td></tr></tbody>';
+    document.getElementById("sum").innerHTML = sum;
+    document.getElementById("sum-sub").textContent = M.name + " · hospedaje " + LV[lvl].toLowerCase() + " · traslados con valijas en " + (mode === "taxi" ? "taxi" : "tren y bus") + " · " + (withOpt ? "con" : "sin") + " opcionales · chequeo " + MED[med].t.toLowerCase() + ".";
+
+    var ms = ["ago","sep","oct"], cs = ms.map(costs);
+    function td(m, inner){ return '<td class="' + (m === mon ? 'cur' : '') + '">' + inner + '</td>'; }
+    var t = '<thead><tr><th>Por persona</th>' + ms.map(function(m){ return '<th class="' + (m === mon ? 'cur' : '') + '">' + MONTHS[m].name + '</th>'; }).join("") + '</tr></thead><tbody>';
+    t += '<tr><td>Vuelo ida y vuelta</td>' + ms.map(function(m){ var f = MONTHS[m].flight; return td(m, fmt(f.v) + '<small>' + flightLabel(m) + '</small>'); }).join("") + '</tr>';
+    t += '<tr><td>Visa de Canadá y K-ETA</td>' + ms.map(function(m){ return td(m, fmt(VISAS)); }).join("") + '</tr>';
+    t += '<tr><td>Hospedaje ' + LV[lvl].toLowerCase() + ', 9 noches</td>' + cs.map(function(c, i){ return td(ms[i], fmt(c.cats.hotel) + '<small>Airbnb · consulta 10 nov</small>'); }).join("") + '</tr>';
+    t += '<tr><td>KTX, entradas, comida y movilidad</td>' + cs.map(function(c, i){ return td(ms[i], fmt(c.japan - c.cats.hotel - c.cats.belleza - c.cats.salud)); }).join("") + '</tr>';
+    t += '<tr><td>Skin care y spa</td>' + cs.map(function(c, i){ return td(ms[i], fmt(c.cats.belleza)); }).join("") + '</tr>';
+    t += '<tr><td>Chequeo médico (' + MED[med].t.toLowerCase() + ')</td>' + cs.map(function(c, i){ return td(ms[i], fmt(c.cats.salud)); }).join("") + '</tr>';
+    t += '<tr><td>Extras (seguro, valija, eSIM y comisiones)</td>' + cs.map(function(c, i){ return td(ms[i], fmt(c.cats.extras)); }).join("") + '</tr>';
+    t += '<tr class="tot"><td>Total por persona</td>' + cs.map(function(c, i){ return td(ms[i], fmt(c.total)); }).join("") + '</tr>';
+    t += '<tr><td>Grupo de 6</td>' + cs.map(function(c, i){ return td(ms[i], fmt(c.total * 6)); }).join("") + '</tr>';
+    t += '<tr class="txt"><td>Clima esperado</td>' + td("ago", "~30 °C, húmedo, lluvias") + td("sep", "~26 °C, Chuseok 14–16") + td("oct", "~20 °C, seco, otoño") + '</tr></tbody>';
+    document.getElementById("months").innerHTML = t;
+  }
+
+  function renderCredits(){
+    var html = "";
+    [DATA.credits, DATA.foodCredits].forEach(function(C, j){
+      Object.keys(C).forEach(function(k){
+        var c = C[k];
+        html += '<li>' + ((j === 0 ? PHOTOS[k] : FOODNAMES[k]) || k) + ': <a href="' + c.page + '" target="_blank" rel="noopener">' + (c.artist || "autor en Commons") + '</a>, ' + c.lic + '</li>';
+      });
+    });
+    document.getElementById("credits").innerHTML = html;
+  }
+
+  var voteDb = null, voteUser = null, voteUid = null, votes = {}, voteCanWrite = true;
+  function choiceText(){
+    var c = costs(mon), P = plan(mon), nm = (document.getElementById("vote-name").value || "").trim();
+    return "Corea 2027" + (nm ? " · " + nm : "") + ": viajo en " + MONTHS[mon].name.toLowerCase() + ", hospedaje " + LV[lvl].toLowerCase() + ", traslados con valijas en " + (mode === "taxi" ? "taxi" : "tren y bus") + ", " + (withOpt ? "con" : "sin") + " opcionales, chequeo " + MED[med].t.toLowerCase() + ". Total estimado " + fmt(c.total) + " por persona; ahorro " + fmt(P.ph1) + " al mes hasta febrero y " + fmt(P.ph2) + " después.";
+  }
+  function renderVoteMine(){
+    var mine = document.getElementById("vote-mine");
+    mine.textContent = "";
+    [["Mes", MONTHS[mon].name], ["Hospedaje", LV[lvl]], ["Traslados", mode === "taxi" ? "Taxi" : "Tren y bus"], ["Opcionales", withOpt ? "Sí" : "No"], ["Chequeo", MED[med].t], ["Total por persona", fmt(costs(mon).total)]].forEach(function(r){
+      var d = document.createElement("div"); var a = document.createElement("span"); a.textContent = r[0]; var b = document.createElement("b"); b.textContent = r[1]; d.appendChild(a); d.appendChild(b); mine.appendChild(d);
+    });
+    var t = choiceText();
+    document.getElementById("vote-text").value = t;
+    document.getElementById("vote-wa").href = "https://wa.me/?text=" + encodeURIComponent(t);
+  }
+  function renderVotes(){
+    var ids = Object.keys(votes), tally = document.getElementById("vote-tally"), list = document.getElementById("vote-list");
+    if (!ids.length) { tally.innerHTML = '<p class="vote-status">Todavía nadie guardó su voto en la página.</p>'; list.textContent = ""; return; }
+    var dims = [["mon","Mes",{ago:"Agosto",sep:"Septiembre",oct:"Octubre"}],["lvl","Hospedaje",{0:"Económico",1:"Medio",2:"Alto"}],["mode","Traslados",{tren:"Tren y bus",taxi:"Taxi"}],["med","Chequeo",{none:"No",basico:"Básico",estandar:"Estándar",premium:"Premium"}]];
+    var html = "";
+    dims.forEach(function(dm){
+      var counts = {}; Object.keys(dm[2]).forEach(function(k){ counts[k] = 0; });
+      ids.forEach(function(id){ var v = votes[id][dm[0]]; if (v != null && counts[String(v)] != null) counts[String(v)]++; });
+      html += '<div class="tally"><span class="eyebrow">' + dm[1] + '</span>' + Object.keys(dm[2]).map(function(k){
+        var pct = Math.round(counts[k] / ids.length * 100);
+        return '<div class="bar"><span>' + dm[2][k] + '</span><i style="--w:' + pct + '%"></i><b>' + counts[k] + '</b></div>';
+      }).join("") + '</div>';
+    });
+    tally.innerHTML = html + '<p class="vote-status">' + ids.length + ' de 6 votaron.</p>';
+    var draw = function(ps){
+      list.textContent = "";
+      ids.forEach(function(id){
+        var v = votes[id], li = document.createElement("li");
+        var nm = document.createElement("b"); nm.textContent = (ps && ps[id] && ps[id].name) || (id === voteUid ? "Vos" : "Alguien del grupo");
+        var tx = document.createElement("span"); tx.textContent = " " + (MONTHS[v.mon] ? MONTHS[v.mon].name : "") + " · " + (LV[v.lvl] || "") + " · " + (v.mode === "taxi" ? "taxi" : "tren") + " · " + (v.opt ? "con" : "sin") + " opcionales · chequeo " + (MED[v.med] ? MED[v.med].t.toLowerCase() : "no");
+        li.appendChild(nm); li.appendChild(tx); list.appendChild(li);
+      });
+    };
+    draw(null);
+    if (voteUser) voteUser.profiles(ids).then(draw);
+  }
+  (async function initVotes(){
+    if (!window.claude || typeof window.claude.use !== "function") return;
+    try {
+      voteDb = await window.claude.use("db");
+      voteUser = await window.claude.use("user");
+      voteUid = voteUser ? await voteUser.id() : null;
+    } catch(e) { return; }
+    if (!voteDb) return;
+    voteDb.collection("votes").onSnapshot(function(snap){
+      votes = {}; snap.docs.forEach(function(d){ if (d.exists) votes[d.id] = d.data(); }); renderVotes();
+    }, function(){});
+    var st = document.getElementById("vote-status"), btn = document.getElementById("vote-save");
+    if (!voteUid) { st.textContent = "Iniciá sesión en claude.ai para guardar tu voto, o mandalo por WhatsApp."; return; }
+    var cw = voteUser ? await voteUser.can("data.write") : null;
+    btn.hidden = false;
+    st.textContent = "Tu voto usa lo que elegiste arriba. Podés cambiarlo cuando quieras.";
+    btn.addEventListener("click", async function(){
+      if (!voteCanWrite) return;
+      btn.disabled = true; st.textContent = "Guardando…";
+      try {
+        await voteDb.collection("votes").doc(voteUid).set({mon:mon, lvl:lvl, mode:mode, opt:withOpt, med:med, at:Date.now()});
+        st.textContent = "Listo, tu voto quedó guardado.";
+      } catch(e) {
+        if (e && e.code === "invalid_argument") { voteCanWrite = false; btn.hidden = true; st.textContent = "Tu acceso a esta página es de solo lectura, así que no podés guardar acá. Mandá tu elección por WhatsApp."; }
+        else st.textContent = "No se pudo guardar. Probá de nuevo en un momento.";
+      }
+      btn.disabled = false;
+    });
+    if (cw === false) { voteCanWrite = false; btn.hidden = true; st.textContent = "Tu acceso a esta página es de solo lectura, así que no podés guardar acá. Mandá tu elección por WhatsApp."; }
+  })();
+  document.getElementById("vote-name").addEventListener("input", renderVoteMine);
+  document.getElementById("vote-copy").addEventListener("click", function(){
+    var ta = document.getElementById("vote-text"), b = this;
+    var done = function(){ b.textContent = "Copiado"; setTimeout(function(){ b.textContent = "Copiar texto"; }, 1500); };
+    try { navigator.clipboard.writeText(ta.value).then(done, function(){ ta.focus(); ta.select(); }); } catch(e) { ta.focus(); ta.select(); }
+  });
+
+  function renderMed(){
+    document.getElementById("med-list").innerHTML = ["basico","estandar","premium"].map(function(k){ var p = MED[k];
+      return '<li><b>' + p.t + ' · ' + fmt(p.krw / RATE) + '</b> (' + yfmt(p.krw) + ', estimado): ' + p.d + '.</li>'; }).join("");
+  }
+  function render(){ renderMed(); renderTotals(); renderSavings(); renderMaps(); renderStays(); renderMoves(); renderDays(); renderVoteMine(); }
+  function save(){ try { localStorage.setItem("kr27c", JSON.stringify({mon:mon, lvl:lvl, opt:withOpt, mode:mode, med:med})); } catch(e){} }
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="lvl"]'), function(r){ r.addEventListener("change", function(){ lvl = +r.value; save(); render(); }); });
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="mon"]'), function(r){ r.addEventListener("change", function(){ mon = r.value; save(); render(); }); });
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="med"]'), function(r){ r.addEventListener("change", function(){ med = r.value; save(); render(); }); });
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="mode"]'), function(r){ r.addEventListener("change", function(){ mode = r.value; save(); render(); }); });
+  document.getElementById("opt").addEventListener("change", function(e){ withOpt = e.target.checked; save(); render(); });
+  document.getElementById("maps").addEventListener("click", function(e){
+    var b = e.target.closest("button[data-map]"); if (!b) return;
+    mapDay[b.getAttribute("data-map")] = b.getAttribute("data-day"); renderMaps();
+  });
+  var savedIn = document.getElementById("saved"), savedErr = document.getElementById("saved-err");
+  savedIn.addEventListener("input", function(){
+    var v = savedIn.value.trim() === "" ? 0 : Number(savedIn.value);
+    if (!isFinite(v) || v < 0) { savedErr.textContent = "Ingresá un monto en dólares mayor o igual a 0"; return; }
+    savedErr.textContent = ""; saved = v; renderSavings();
+  });
+  renderCredits();
+  render();
+})();
+</script>
+
+
+
+
+</body></html>
